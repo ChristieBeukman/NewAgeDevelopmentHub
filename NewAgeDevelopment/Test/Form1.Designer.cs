@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.genericAtlanticCostingControl1 = new UserControls.GenericAtlanticCostingControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.genericAtlanticCostingControl2 = new UserControls.GenericAtlanticCostingControl();
+            this.genericAtlanticCostingControl1 = new UserControls.GenericAtlanticCostingControl();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // genericAtlanticCostingControl1
-            // 
-            this.genericAtlanticCostingControl1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.genericAtlanticCostingControl1.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
-            this.genericAtlanticCostingControl1.Location = new System.Drawing.Point(0, 34);
-            this.genericAtlanticCostingControl1.MaterialID = null;
-            this.genericAtlanticCostingControl1.Name = "genericAtlanticCostingControl1";
-            this.genericAtlanticCostingControl1.Size = new System.Drawing.Size(550, 392);
-            this.genericAtlanticCostingControl1.TabIndex = 0;
             // 
             // comboBox1
             // 
@@ -63,16 +54,36 @@
             this.genericAtlanticCostingControl2.Size = new System.Drawing.Size(550, 392);
             this.genericAtlanticCostingControl2.TabIndex = 2;
             // 
+            // genericAtlanticCostingControl1
+            // 
+            this.genericAtlanticCostingControl1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.genericAtlanticCostingControl1.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.genericAtlanticCostingControl1.Location = new System.Drawing.Point(0, 34);
+            this.genericAtlanticCostingControl1.MaterialID = null;
+            this.genericAtlanticCostingControl1.Name = "genericAtlanticCostingControl1";
+            this.genericAtlanticCostingControl1.Size = new System.Drawing.Size(550, 392);
+            this.genericAtlanticCostingControl1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 446);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.genericAtlanticCostingControl2);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,6 +92,7 @@
         private UserControls.GenericAtlanticCostingControl genericAtlanticCostingControl1;
         private System.Windows.Forms.ComboBox comboBox1;
         private UserControls.GenericAtlanticCostingControl genericAtlanticCostingControl2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

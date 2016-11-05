@@ -30,6 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblTotalFrameArea = new System.Windows.Forms.Label();
+            this.lblTotalCanvasArea = new System.Windows.Forms.Label();
+            this.lblCanvasOveralap = new System.Windows.Forms.Label();
+            this.lblFrameArea = new System.Windows.Forms.Label();
+            this.lblTotalUsedFrameCost = new System.Windows.Forms.Label();
+            this.lblNoFrames = new System.Windows.Forms.Label();
+            this.lblFrameWidth = new System.Windows.Forms.Label();
+            this.lblFrameLength = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -43,14 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblFrame = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblFrameLength = new System.Windows.Forms.Label();
-            this.lblFrameWidth = new System.Windows.Forms.Label();
-            this.lblNoFrames = new System.Windows.Forms.Label();
-            this.lblTotalFrameArea = new System.Windows.Forms.Label();
-            this.lblTotalCanvasArea = new System.Windows.Forms.Label();
-            this.lblCanvasOveralap = new System.Windows.Forms.Label();
-            this.lblFrameArea = new System.Windows.Forms.Label();
-            this.lblTotalUsedFrameCost = new System.Windows.Forms.Label();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +90,118 @@
             this.groupBox2.Size = new System.Drawing.Size(202, 230);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
+            // 
+            // lblTotalFrameArea
+            // 
+            this.lblTotalFrameArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTotalFrameArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalFrameArea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotalFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblTotalFrameArea.Location = new System.Drawing.Point(126, 194);
+            this.lblTotalFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblTotalFrameArea.Name = "lblTotalFrameArea";
+            this.lblTotalFrameArea.Size = new System.Drawing.Size(70, 20);
+            this.lblTotalFrameArea.TabIndex = 30;
+            this.lblTotalFrameArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalFrameArea.DoubleClick += new System.EventHandler(this.lblTotalFrameArea_DoubleClick);
+            // 
+            // lblTotalCanvasArea
+            // 
+            this.lblTotalCanvasArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTotalCanvasArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalCanvasArea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotalCanvasArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblTotalCanvasArea.Location = new System.Drawing.Point(126, 167);
+            this.lblTotalCanvasArea.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblTotalCanvasArea.Name = "lblTotalCanvasArea";
+            this.lblTotalCanvasArea.Size = new System.Drawing.Size(70, 20);
+            this.lblTotalCanvasArea.TabIndex = 29;
+            this.lblTotalCanvasArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalCanvasArea.DoubleClick += new System.EventHandler(this.lblTotalCanvasArea_DoubleClick);
+            // 
+            // lblCanvasOveralap
+            // 
+            this.lblCanvasOveralap.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblCanvasOveralap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCanvasOveralap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCanvasOveralap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblCanvasOveralap.Location = new System.Drawing.Point(125, 141);
+            this.lblCanvasOveralap.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblCanvasOveralap.Name = "lblCanvasOveralap";
+            this.lblCanvasOveralap.Size = new System.Drawing.Size(70, 20);
+            this.lblCanvasOveralap.TabIndex = 28;
+            this.lblCanvasOveralap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCanvasOveralap.DoubleClick += new System.EventHandler(this.lblCanvasOveralap_DoubleClick);
+            // 
+            // lblFrameArea
+            // 
+            this.lblFrameArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblFrameArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFrameArea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblFrameArea.Location = new System.Drawing.Point(125, 116);
+            this.lblFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblFrameArea.Name = "lblFrameArea";
+            this.lblFrameArea.Size = new System.Drawing.Size(70, 20);
+            this.lblFrameArea.TabIndex = 27;
+            this.lblFrameArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFrameArea.DoubleClick += new System.EventHandler(this.lblFrameArea_DoubleClick);
+            // 
+            // lblTotalUsedFrameCost
+            // 
+            this.lblTotalUsedFrameCost.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTotalUsedFrameCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalUsedFrameCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotalUsedFrameCost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblTotalUsedFrameCost.Location = new System.Drawing.Point(125, 89);
+            this.lblTotalUsedFrameCost.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblTotalUsedFrameCost.Name = "lblTotalUsedFrameCost";
+            this.lblTotalUsedFrameCost.Size = new System.Drawing.Size(70, 20);
+            this.lblTotalUsedFrameCost.TabIndex = 26;
+            this.lblTotalUsedFrameCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalUsedFrameCost.DoubleClick += new System.EventHandler(this.lblTotalUsedFrameCost_DoubleClick);
+            // 
+            // lblNoFrames
+            // 
+            this.lblNoFrames.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblNoFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNoFrames.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblNoFrames.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblNoFrames.Location = new System.Drawing.Point(126, 64);
+            this.lblNoFrames.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblNoFrames.Name = "lblNoFrames";
+            this.lblNoFrames.Size = new System.Drawing.Size(70, 20);
+            this.lblNoFrames.TabIndex = 25;
+            this.lblNoFrames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNoFrames.DoubleClick += new System.EventHandler(this.lblNoFrames_DoubleClick);
+            // 
+            // lblFrameWidth
+            // 
+            this.lblFrameWidth.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblFrameWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFrameWidth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFrameWidth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblFrameWidth.Location = new System.Drawing.Point(125, 37);
+            this.lblFrameWidth.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblFrameWidth.Name = "lblFrameWidth";
+            this.lblFrameWidth.Size = new System.Drawing.Size(70, 20);
+            this.lblFrameWidth.TabIndex = 24;
+            this.lblFrameWidth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFrameWidth.DoubleClick += new System.EventHandler(this.lblFrameWidth_DoubleClick);
+            // 
+            // lblFrameLength
+            // 
+            this.lblFrameLength.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblFrameLength.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFrameLength.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFrameLength.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblFrameLength.Location = new System.Drawing.Point(126, 12);
+            this.lblFrameLength.MinimumSize = new System.Drawing.Size(70, 20);
+            this.lblFrameLength.Name = "lblFrameLength";
+            this.lblFrameLength.Size = new System.Drawing.Size(70, 20);
+            this.lblFrameLength.TabIndex = 0;
+            this.lblFrameLength.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFrameLength.DoubleClick += new System.EventHandler(this.lblFrameLength_DoubleClick);
             // 
             // label5
             // 
@@ -216,107 +330,39 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Frame:";
             // 
-            // lblFrameLength
+            // btnApply
             // 
-            this.lblFrameLength.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblFrameLength.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFrameLength.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblFrameLength.Location = new System.Drawing.Point(126, 12);
-            this.lblFrameLength.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblFrameLength.Name = "lblFrameLength";
-            this.lblFrameLength.Size = new System.Drawing.Size(70, 20);
-            this.lblFrameLength.TabIndex = 0;
-            this.lblFrameLength.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnApply.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnApply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Location = new System.Drawing.Point(33, 341);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(75, 23);
+            this.btnApply.TabIndex = 14;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
-            // lblFrameWidth
+            // btnCancel
             // 
-            this.lblFrameWidth.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblFrameWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFrameWidth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblFrameWidth.Location = new System.Drawing.Point(125, 37);
-            this.lblFrameWidth.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblFrameWidth.Name = "lblFrameWidth";
-            this.lblFrameWidth.Size = new System.Drawing.Size(70, 20);
-            this.lblFrameWidth.TabIndex = 24;
-            this.lblFrameWidth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblNoFrames
-            // 
-            this.lblNoFrames.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblNoFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNoFrames.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNoFrames.Location = new System.Drawing.Point(126, 64);
-            this.lblNoFrames.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblNoFrames.Name = "lblNoFrames";
-            this.lblNoFrames.Size = new System.Drawing.Size(70, 20);
-            this.lblNoFrames.TabIndex = 25;
-            this.lblNoFrames.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblTotalFrameArea
-            // 
-            this.lblTotalFrameArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblTotalFrameArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblTotalFrameArea.Location = new System.Drawing.Point(124, 194);
-            this.lblTotalFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblTotalFrameArea.Name = "lblTotalFrameArea";
-            this.lblTotalFrameArea.Size = new System.Drawing.Size(70, 20);
-            this.lblTotalFrameArea.TabIndex = 30;
-            this.lblTotalFrameArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblTotalCanvasArea
-            // 
-            this.lblTotalCanvasArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblTotalCanvasArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalCanvasArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblTotalCanvasArea.Location = new System.Drawing.Point(126, 167);
-            this.lblTotalCanvasArea.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblTotalCanvasArea.Name = "lblTotalCanvasArea";
-            this.lblTotalCanvasArea.Size = new System.Drawing.Size(70, 20);
-            this.lblTotalCanvasArea.TabIndex = 29;
-            this.lblTotalCanvasArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblCanvasOveralap
-            // 
-            this.lblCanvasOveralap.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblCanvasOveralap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCanvasOveralap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblCanvasOveralap.Location = new System.Drawing.Point(125, 141);
-            this.lblCanvasOveralap.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblCanvasOveralap.Name = "lblCanvasOveralap";
-            this.lblCanvasOveralap.Size = new System.Drawing.Size(70, 20);
-            this.lblCanvasOveralap.TabIndex = 28;
-            this.lblCanvasOveralap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblFrameArea
-            // 
-            this.lblFrameArea.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblFrameArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblFrameArea.Location = new System.Drawing.Point(125, 116);
-            this.lblFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblFrameArea.Name = "lblFrameArea";
-            this.lblFrameArea.Size = new System.Drawing.Size(70, 20);
-            this.lblFrameArea.TabIndex = 27;
-            this.lblFrameArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblTotalUsedFrameCost
-            // 
-            this.lblTotalUsedFrameCost.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblTotalUsedFrameCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalUsedFrameCost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblTotalUsedFrameCost.Location = new System.Drawing.Point(125, 89);
-            this.lblTotalUsedFrameCost.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblTotalUsedFrameCost.Name = "lblTotalUsedFrameCost";
-            this.lblTotalUsedFrameCost.Size = new System.Drawing.Size(70, 20);
-            this.lblTotalUsedFrameCost.TabIndex = 26;
-            this.lblTotalUsedFrameCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(114, 341);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // GenericAtlanticCostingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -355,5 +401,7 @@
         private System.Windows.Forms.Label lblCanvasOveralap;
         private System.Windows.Forms.Label lblFrameArea;
         private System.Windows.Forms.Label lblTotalUsedFrameCost;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
