@@ -16,11 +16,13 @@ namespace Test
     {
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
+        List<Accessor.AtlanticCanvasLenght> atl = DataEngine.GetAtlanticLength(1);
 
         public Form1()
         {
             InitializeComponent();
-            List<Accessor.AtlanticCanvasLenght> atl = DataEngine.GetAtlanticLength(1);
+            genericAtlanticCostingControl2.FrameType = GenericAtlanticCostingControl.myFrameType.Atwo;
+            genericAtlanticCostingControl1.MaterialID = "";
             comboBox1.DataSource = atl;
 
         }
@@ -34,10 +36,10 @@ namespace Test
         private void comboBox1_SelectionChangeCommitted(Object sender, EventArgs e)
         {
             
-            this.genericAtlanticCostingControl1.FrameType = GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
             l = new Accessor.AtlanticCanvasLenght();
             l = comboBox1.SelectedItem as Accessor.AtlanticCanvasLenght;
-            genericAtlanticCostingControl1.MatertialID.Text = l.MaterialID;
+            genericAtlanticCostingControl2.MaterialID = l.MaterialID;
+            genericAtlanticCostingControl2.SetDisplay(); 
         }
     }
 }

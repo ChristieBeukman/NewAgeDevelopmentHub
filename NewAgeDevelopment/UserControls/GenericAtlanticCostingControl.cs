@@ -15,12 +15,7 @@ namespace UserControls
     {
         #region Properties
 
-        public Label MatertialID
-        {
-            get { return lblMaterialID; }
-            set { lblMaterialID = value; }
-        }
-
+        string materialID;
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
 
@@ -32,6 +27,19 @@ namespace UserControls
             set { frameType = value; }
         }
 
+        public String MaterialID
+        {
+            get
+            {
+                return materialID;
+            }
+
+            set
+            {
+                materialID = value;
+            }
+        }
+
 
         #endregion Properties
 
@@ -40,7 +48,7 @@ namespace UserControls
         public GenericAtlanticCostingControl()
         {
             InitializeComponent();
-            SetDisplay();
+            
         }
 
         #endregion Constructor
@@ -50,17 +58,39 @@ namespace UserControls
         /// <summary>
         /// Sets the inititial display populating all the fields with the selection
         /// </summary>
-        private void SetDisplay()
+        public  void SetDisplay()
         {
-            l = new Accessor.AtlanticCanvasLenght();
-            l = cmbLengthMaterial.SelectedItem as Accessor.AtlanticCanvasLenght;
-            this.Size = new System.Drawing.Size(600, 450);
-            string id = l.MaterialID;
-            tblAtlanticCanvasLength o = DataEngine.GetAtlanticLength(1, id);
-            tblMaterial mat = DataEngine.GetMaterial(id);
+            int frameTyepID =1 ; //Default
+
+            switch (frameType)
+            {
+                case myFrameType.SquareTwoFifty:
+                    frameTyepID = 1;
+                    break;
+                case myFrameType.Atwo:
+                    frameTyepID = 2;
+                    break;
+                case myFrameType.SquareFourFifty:
+                    frameTyepID = 3;
+                    break;
+                case myFrameType.FourFifty:
+                    frameTyepID = 4;
+                    break;
+                case myFrameType.FiveFifty:
+                    frameTyepID = 5;
+                    break;
+                case myFrameType.Pane:
+                    frameTyepID = 6;
+                    break;
+                default:
+                    break;
+            }
+
+            tblAtlanticCanvasLength o = DataEngine.GetAtlanticLength(frameTyepID, materialID);
+            tblMaterial mat = DataEngine.GetMaterial(materialID);
             //Top Frame
             lblFrame.Text = mat.Name;
-            lblMaterialID.Text = id;
+            lblMaterialID.Text = materialID;
 
             // Details
 
@@ -89,8 +119,6 @@ namespace UserControls
             lblTotalFrameArea.Text = o.TotalFrameLength.ToString();
 
 
-            cmbLengthMaterial.Hide();
-            tabAtlanticCosting.Show();
         }
 
         #endregion Methods

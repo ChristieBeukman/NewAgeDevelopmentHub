@@ -70,7 +70,7 @@ namespace Costing_Engine
             l = cmbLengthMaterial.SelectedItem as Accessor.AtlanticCanvasLenght;
 
         }
-
+            
         private void cmbLengthMaterial_SelectionChangeCommitted(Object sender, EventArgs e)
         {
             SetDisplay();
