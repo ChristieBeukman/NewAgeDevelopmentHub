@@ -39,3 +39,17 @@ D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Costing Engine\obj
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Costing Engine\obj\Debug\Costing_Engine.frmCosting.resources
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Costing Engine\obj\Debug\Costing_Engine.Properties.Resources.resources
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Costing Engine\obj\Debug\Costing Engine.csproj.GenerateResource.Cache
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\Costing Engine.exe.config
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing Engine.exe
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing Engine.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\Costing Engine.exe
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\Costing Engine.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\Engines.dll
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\UserControls.dll
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\UserControls.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\bin\Debug\Engines.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing Engine.csprojResolveAssemblyReference.cache
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing_Engine.frmAtlantic.resources
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing_Engine.frmCosting.resources
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing_Engine.Properties.Resources.resources
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Costing Engine\obj\Debug\Costing Engine.csproj.GenerateResource.Cache

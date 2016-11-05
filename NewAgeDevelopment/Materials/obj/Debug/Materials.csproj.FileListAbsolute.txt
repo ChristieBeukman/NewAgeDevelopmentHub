@@ -20,3 +20,14 @@ D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Materials\obj\Debu
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Materials\obj\Debug\Materials.csproj.GenerateResource.Cache
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Materials\obj\Debug\Materials.exe
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Materials\obj\Debug\Materials.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\bin\Debug\Materials.exe.config
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\bin\Debug\Materials.exe
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\bin\Debug\Materials.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\bin\Debug\Engines.dll
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\bin\Debug\Engines.pdb
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.csprojResolveAssemblyReference.cache
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.frmAddMatertial.resources
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.Properties.Resources.resources
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.csproj.GenerateResource.Cache
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.exe
+D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Materials\obj\Debug\Materials.pdb
