@@ -36,8 +36,9 @@
             this.labelDisplay.AutoSize = true;
             this.labelDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDisplay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.labelDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelDisplay.Location = new System.Drawing.Point(3, 0);
+            this.labelDisplay.Location = new System.Drawing.Point(0, 0);
             this.labelDisplay.MinimumSize = new System.Drawing.Size(70, 20);
             this.labelDisplay.Name = "labelDisplay";
             this.labelDisplay.Size = new System.Drawing.Size(70, 20);

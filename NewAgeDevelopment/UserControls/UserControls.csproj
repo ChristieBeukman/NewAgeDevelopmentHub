@@ -48,6 +48,12 @@
     <Compile Include="AreaControl.Designer.cs">
       <DependentUpon>AreaControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericAtlanticCostingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenericAtlanticCostingControl.Designer.cs">
+      <DependentUpon>GenericAtlanticCostingControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenericCostingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GenericAtlanticCostingControl.resx">
+      <DependentUpon>GenericAtlanticCostingControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenericCostingControl.resx">
       <DependentUpon>GenericCostingControl.cs</DependentUpon>
     </EmbeddedResource>

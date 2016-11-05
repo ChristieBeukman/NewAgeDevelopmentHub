@@ -71,6 +71,15 @@ namespace Engines
             }
         }
 
+        public static tblMaterial GetMaterial(string materialID)
+        {
+            using (LinqtoNewAgeDataContext dc = new LinqtoNewAgeDataContext())
+            {
+                return (from ord in dc.GetTable<tblMaterial>()
+                        where ord.MaterialID == materialID
+                        select ord).SingleOrDefault<tblMaterial>();
+            }
+        }
         /// <summary>
         /// Select the LengthCost by materialID
         /// </summary>
@@ -177,8 +186,54 @@ namespace Engines
 
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="matID"></param>
+        /// <param name="frameType"></param>
+        /// <returns></returns>
+        public static List<Accessor.AtlanticCanvasLenght> GetAtlanticLength(int frameType)
+        {
+            using (LinqtoNewAgeDataContext dc = new LinqtoNewAgeDataContext())
+            {
+                var Query = from n in dc.tblAtlanticCanvasLengths
+                            join m in dc.tblMaterials
+                            on n.MaterialID equals m.MaterialID
+                            where n.FrameID == frameType
+                            select new Accessor.AtlanticCanvasLenght
+                            {
+                                MaterialID = n.MaterialID,
+                                FrameID = n.FrameID,
+                                FrameLenght = n.FrameLenght,
+                                FrameWidth = n.FrameWidth,
+                                NoOfFrames = n.NoOfFrames,
+                                TotalUsedFrameCost = n.TotalUsedFrameCost,
+                                TotalArea = n.FrameArea,
+                                CanvasOverlap = n.CanvasOverlap,
+                                TotalCanvasArea = n.TotalCanvasArea,
+                                TotalFrameLength = n.TotalFrameLength
+                            };
+                return Query.ToList();
+            }
+        }
+        /// <summary>
+        /// Return single Record
+        /// </summary>
+        /// <param name="frameType"></param>
+        /// <param name="materialID"></param>
+        /// <returns></returns>
+        public static tblAtlanticCanvasLength GetAtlanticLength(int frameType, String materialID)
+        {
+            using (LinqtoNewAgeDataContext dc = new LinqtoNewAgeDataContext())
+            {
+                return (from ord in dc.GetTable<tblAtlanticCanvasLength>()
+                        join m in dc.tblMaterials
+                        on ord.MaterialID equals m.MaterialID
+                        where ord.FrameID == frameType && ord.MaterialID == materialID
+                        select ord).SingleOrDefault< tblAtlanticCanvasLength>();
+            }
+        }
 
-        
         #endregion Select
 
         #region Insert
