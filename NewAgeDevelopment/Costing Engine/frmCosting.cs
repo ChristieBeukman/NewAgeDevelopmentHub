@@ -43,13 +43,13 @@ namespace Costing_Engine
                     l.RatePerHour = decimal.Parse(maskedEditableLabelControl1.Text, System.Globalization.NumberStyles.Currency); ;
                     d.SaveBussinessCost(costID,l);
                     MessageBox.Show("Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    cmbMaterial.DataSource = d.GetBusCost();
                     //SetDisplay(false);
                     break;
                 case DialogResult.No:
                     break;
                 default:
                     break;
+                    cmbMaterial.DataSource = d.GetBusCost();
 
             }
         }

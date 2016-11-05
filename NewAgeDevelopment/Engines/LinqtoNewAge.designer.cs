@@ -33,9 +33,6 @@ namespace Engines
     partial void InserttblAreaCost(tblAreaCost instance);
     partial void UpdatetblAreaCost(tblAreaCost instance);
     partial void DeletetblAreaCost(tblAreaCost instance);
-    partial void InserttblVolumeCost(tblVolumeCost instance);
-    partial void UpdatetblVolumeCost(tblVolumeCost instance);
-    partial void DeletetblVolumeCost(tblVolumeCost instance);
     partial void InserttblAtlanticCanvasArea(tblAtlanticCanvasArea instance);
     partial void UpdatetblAtlanticCanvasArea(tblAtlanticCanvasArea instance);
     partial void DeletetblAtlanticCanvasArea(tblAtlanticCanvasArea instance);
@@ -48,12 +45,21 @@ namespace Engines
     partial void InserttblAtlanticCanvasVolume(tblAtlanticCanvasVolume instance);
     partial void UpdatetblAtlanticCanvasVolume(tblAtlanticCanvasVolume instance);
     partial void DeletetblAtlanticCanvasVolume(tblAtlanticCanvasVolume instance);
+    partial void InserttblAtlanticFramedArea(tblAtlanticFramedArea instance);
+    partial void UpdatetblAtlanticFramedArea(tblAtlanticFramedArea instance);
+    partial void DeletetblAtlanticFramedArea(tblAtlanticFramedArea instance);
+    partial void InserttblAtlanticFramedBussCost(tblAtlanticFramedBussCost instance);
+    partial void UpdatetblAtlanticFramedBussCost(tblAtlanticFramedBussCost instance);
+    partial void DeletetblAtlanticFramedBussCost(tblAtlanticFramedBussCost instance);
+    partial void InserttblAtlanticFramedLength(tblAtlanticFramedLength instance);
+    partial void UpdatetblAtlanticFramedLength(tblAtlanticFramedLength instance);
+    partial void DeletetblAtlanticFramedLength(tblAtlanticFramedLength instance);
+    partial void InserttblAtlanticFramedVolume(tblAtlanticFramedVolume instance);
+    partial void UpdatetblAtlanticFramedVolume(tblAtlanticFramedVolume instance);
+    partial void DeletetblAtlanticFramedVolume(tblAtlanticFramedVolume instance);
     partial void InserttblBussinessCost(tblBussinessCost instance);
     partial void UpdatetblBussinessCost(tblBussinessCost instance);
     partial void DeletetblBussinessCost(tblBussinessCost instance);
-    partial void InserttblFrameType(tblFrameType instance);
-    partial void UpdatetblFrameType(tblFrameType instance);
-    partial void DeletetblFrameType(tblFrameType instance);
     partial void InserttblLengthCost(tblLengthCost instance);
     partial void UpdatetblLengthCost(tblLengthCost instance);
     partial void DeletetblLengthCost(tblLengthCost instance);
@@ -63,6 +69,9 @@ namespace Engines
     partial void InserttblMaterialType(tblMaterialType instance);
     partial void UpdatetblMaterialType(tblMaterialType instance);
     partial void DeletetblMaterialType(tblMaterialType instance);
+    partial void InserttblVolumeCost(tblVolumeCost instance);
+    partial void UpdatetblVolumeCost(tblVolumeCost instance);
+    partial void DeletetblVolumeCost(tblVolumeCost instance);
     #endregion
 		
 		public LinqtoNewAgeDataContext() : 
@@ -103,14 +112,6 @@ namespace Engines
 			}
 		}
 		
-		public System.Data.Linq.Table<tblVolumeCost> tblVolumeCosts
-		{
-			get
-			{
-				return this.GetTable<tblVolumeCost>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tblAtlanticCanvasArea> tblAtlanticCanvasAreas
 		{
 			get
@@ -143,19 +144,43 @@ namespace Engines
 			}
 		}
 		
+		public System.Data.Linq.Table<tblAtlanticFramedArea> tblAtlanticFramedAreas
+		{
+			get
+			{
+				return this.GetTable<tblAtlanticFramedArea>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblAtlanticFramedBussCost> tblAtlanticFramedBussCosts
+		{
+			get
+			{
+				return this.GetTable<tblAtlanticFramedBussCost>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblAtlanticFramedLength> tblAtlanticFramedLengths
+		{
+			get
+			{
+				return this.GetTable<tblAtlanticFramedLength>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblAtlanticFramedVolume> tblAtlanticFramedVolumes
+		{
+			get
+			{
+				return this.GetTable<tblAtlanticFramedVolume>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tblBussinessCost> tblBussinessCosts
 		{
 			get
 			{
 				return this.GetTable<tblBussinessCost>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblFrameType> tblFrameTypes
-		{
-			get
-			{
-				return this.GetTable<tblFrameType>();
 			}
 		}
 		
@@ -180,6 +205,14 @@ namespace Engines
 			get
 			{
 				return this.GetTable<tblMaterialType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblVolumeCost> tblVolumeCosts
+		{
+			get
+			{
+				return this.GetTable<tblVolumeCost>();
 			}
 		}
 	}
@@ -464,270 +497,6 @@ namespace Engines
 					if ((value != null))
 					{
 						value.tblAreaCosts.Add(this);
-						this._TypeID = value.TypeID;
-					}
-					else
-					{
-						this._TypeID = default(int);
-					}
-					this.SendPropertyChanged("tblMaterialType");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblVolumeCost")]
-	public partial class tblVolumeCost : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _VolumeCostID;
-		
-		private int _TypeID;
-		
-		private string _MaterialID;
-		
-		private System.Nullable<decimal> _TotalVolume;
-		
-		private System.Nullable<decimal> _PricePerLiter;
-		
-		private System.Nullable<decimal> _TotalCost;
-		
-		private EntityRef<tblMaterial> _tblMaterial;
-		
-		private EntityRef<tblMaterialType> _tblMaterialType;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnVolumeCostIDChanging(int value);
-    partial void OnVolumeCostIDChanged();
-    partial void OnTypeIDChanging(int value);
-    partial void OnTypeIDChanged();
-    partial void OnMaterialIDChanging(string value);
-    partial void OnMaterialIDChanged();
-    partial void OnTotalVolumeChanging(System.Nullable<decimal> value);
-    partial void OnTotalVolumeChanged();
-    partial void OnPricePerLiterChanging(System.Nullable<decimal> value);
-    partial void OnPricePerLiterChanged();
-    partial void OnTotalCostChanging(System.Nullable<decimal> value);
-    partial void OnTotalCostChanged();
-    #endregion
-		
-		public tblVolumeCost()
-		{
-			this._tblMaterial = default(EntityRef<tblMaterial>);
-			this._tblMaterialType = default(EntityRef<tblMaterialType>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VolumeCostID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int VolumeCostID
-		{
-			get
-			{
-				return this._VolumeCostID;
-			}
-			set
-			{
-				if ((this._VolumeCostID != value))
-				{
-					this.OnVolumeCostIDChanging(value);
-					this.SendPropertyChanging();
-					this._VolumeCostID = value;
-					this.SendPropertyChanged("VolumeCostID");
-					this.OnVolumeCostIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int NOT NULL")]
-		public int TypeID
-		{
-			get
-			{
-				return this._TypeID;
-			}
-			set
-			{
-				if ((this._TypeID != value))
-				{
-					if (this._tblMaterialType.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnTypeIDChanging(value);
-					this.SendPropertyChanging();
-					this._TypeID = value;
-					this.SendPropertyChanged("TypeID");
-					this.OnTypeIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
-		public string MaterialID
-		{
-			get
-			{
-				return this._MaterialID;
-			}
-			set
-			{
-				if ((this._MaterialID != value))
-				{
-					if (this._tblMaterial.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaterialIDChanging(value);
-					this.SendPropertyChanging();
-					this._MaterialID = value;
-					this.SendPropertyChanged("MaterialID");
-					this.OnMaterialIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalVolume", DbType="Decimal(9,2)")]
-		public System.Nullable<decimal> TotalVolume
-		{
-			get
-			{
-				return this._TotalVolume;
-			}
-			set
-			{
-				if ((this._TotalVolume != value))
-				{
-					this.OnTotalVolumeChanging(value);
-					this.SendPropertyChanging();
-					this._TotalVolume = value;
-					this.SendPropertyChanged("TotalVolume");
-					this.OnTotalVolumeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricePerLiter", DbType="Money")]
-		public System.Nullable<decimal> PricePerLiter
-		{
-			get
-			{
-				return this._PricePerLiter;
-			}
-			set
-			{
-				if ((this._PricePerLiter != value))
-				{
-					this.OnPricePerLiterChanging(value);
-					this.SendPropertyChanging();
-					this._PricePerLiter = value;
-					this.SendPropertyChanged("PricePerLiter");
-					this.OnPricePerLiterChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalCost", DbType="Money")]
-		public System.Nullable<decimal> TotalCost
-		{
-			get
-			{
-				return this._TotalCost;
-			}
-			set
-			{
-				if ((this._TotalCost != value))
-				{
-					this.OnTotalCostChanging(value);
-					this.SendPropertyChanging();
-					this._TotalCost = value;
-					this.SendPropertyChanged("TotalCost");
-					this.OnTotalCostChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblVolumeCost", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
-		public tblMaterial tblMaterial
-		{
-			get
-			{
-				return this._tblMaterial.Entity;
-			}
-			set
-			{
-				tblMaterial previousValue = this._tblMaterial.Entity;
-				if (((previousValue != value) 
-							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tblMaterial.Entity = null;
-						previousValue.tblVolumeCosts.Remove(this);
-					}
-					this._tblMaterial.Entity = value;
-					if ((value != null))
-					{
-						value.tblVolumeCosts.Add(this);
-						this._MaterialID = value.MaterialID;
-					}
-					else
-					{
-						this._MaterialID = default(string);
-					}
-					this.SendPropertyChanged("tblMaterial");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterialType_tblVolumeCost", Storage="_tblMaterialType", ThisKey="TypeID", OtherKey="TypeID", IsForeignKey=true)]
-		public tblMaterialType tblMaterialType
-		{
-			get
-			{
-				return this._tblMaterialType.Entity;
-			}
-			set
-			{
-				tblMaterialType previousValue = this._tblMaterialType.Entity;
-				if (((previousValue != value) 
-							|| (this._tblMaterialType.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tblMaterialType.Entity = null;
-						previousValue.tblVolumeCosts.Remove(this);
-					}
-					this._tblMaterialType.Entity = value;
-					if ((value != null))
-					{
-						value.tblVolumeCosts.Add(this);
 						this._TypeID = value.TypeID;
 					}
 					else
@@ -1192,8 +961,6 @@ namespace Engines
 		
 		private string _MaterialID;
 		
-		private int _FrameID;
-		
 		private System.Nullable<decimal> _FrameLenght;
 		
 		private System.Nullable<decimal> _FrameWidth;
@@ -1210,7 +977,7 @@ namespace Engines
 		
 		private System.Nullable<decimal> _TotalFrameLength;
 		
-		private EntityRef<tblFrameType> _tblFrameType;
+		private string _FrameDescription;
 		
 		private EntityRef<tblMaterial> _tblMaterial;
 		
@@ -1222,8 +989,6 @@ namespace Engines
     partial void OnAtlanticCanvasLenIDChanged();
     partial void OnMaterialIDChanging(string value);
     partial void OnMaterialIDChanged();
-    partial void OnFrameIDChanging(int value);
-    partial void OnFrameIDChanged();
     partial void OnFrameLenghtChanging(System.Nullable<decimal> value);
     partial void OnFrameLenghtChanged();
     partial void OnFrameWidthChanging(System.Nullable<decimal> value);
@@ -1240,11 +1005,12 @@ namespace Engines
     partial void OnTotalCanvasAreaChanged();
     partial void OnTotalFrameLengthChanging(System.Nullable<decimal> value);
     partial void OnTotalFrameLengthChanged();
+    partial void OnFrameDescriptionChanging(string value);
+    partial void OnFrameDescriptionChanged();
     #endregion
 		
 		public tblAtlanticCanvasLength()
 		{
-			this._tblFrameType = default(EntityRef<tblFrameType>);
 			this._tblMaterial = default(EntityRef<tblMaterial>);
 			OnCreated();
 		}
@@ -1289,30 +1055,6 @@ namespace Engines
 					this._MaterialID = value;
 					this.SendPropertyChanged("MaterialID");
 					this.OnMaterialIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameID", DbType="Int NOT NULL")]
-		public int FrameID
-		{
-			get
-			{
-				return this._FrameID;
-			}
-			set
-			{
-				if ((this._FrameID != value))
-				{
-					if (this._tblFrameType.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnFrameIDChanging(value);
-					this.SendPropertyChanging();
-					this._FrameID = value;
-					this.SendPropertyChanged("FrameID");
-					this.OnFrameIDChanged();
 				}
 			}
 		}
@@ -1477,36 +1219,22 @@ namespace Engines
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblFrameType_tblAtlanticCanvasLength", Storage="_tblFrameType", ThisKey="FrameID", OtherKey="FrameID", IsForeignKey=true)]
-		public tblFrameType tblFrameType
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameDescription", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string FrameDescription
 		{
 			get
 			{
-				return this._tblFrameType.Entity;
+				return this._FrameDescription;
 			}
 			set
 			{
-				tblFrameType previousValue = this._tblFrameType.Entity;
-				if (((previousValue != value) 
-							|| (this._tblFrameType.HasLoadedOrAssignedValue == false)))
+				if ((this._FrameDescription != value))
 				{
+					this.OnFrameDescriptionChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tblFrameType.Entity = null;
-						previousValue.tblAtlanticCanvasLengths.Remove(this);
-					}
-					this._tblFrameType.Entity = value;
-					if ((value != null))
-					{
-						value.tblAtlanticCanvasLengths.Add(this);
-						this._FrameID = value.FrameID;
-					}
-					else
-					{
-						this._FrameID = default(int);
-					}
-					this.SendPropertyChanged("tblFrameType");
+					this._FrameDescription = value;
+					this.SendPropertyChanged("FrameDescription");
+					this.OnFrameDescriptionChanged();
 				}
 			}
 		}
@@ -1733,6 +1461,946 @@ namespace Engines
 					if ((value != null))
 					{
 						value.tblAtlanticCanvasVolumes.Add(this);
+						this._MaterialID = value.MaterialID;
+					}
+					else
+					{
+						this._MaterialID = default(string);
+					}
+					this.SendPropertyChanged("tblMaterial");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblAtlanticFramedArea")]
+	public partial class tblAtlanticFramedArea : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AtlanticFramedAreaID;
+		
+		private string _MaterialID;
+		
+		private System.Nullable<decimal> _PricePerSqrMeter;
+		
+		private System.Nullable<decimal> _AreaLength;
+		
+		private System.Nullable<decimal> _AreaWidth;
+		
+		private System.Nullable<decimal> _TotalUsedAreaCost;
+		
+		private EntityRef<tblMaterial> _tblMaterial;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAtlanticFramedAreaIDChanging(int value);
+    partial void OnAtlanticFramedAreaIDChanged();
+    partial void OnMaterialIDChanging(string value);
+    partial void OnMaterialIDChanged();
+    partial void OnPricePerSqrMeterChanging(System.Nullable<decimal> value);
+    partial void OnPricePerSqrMeterChanged();
+    partial void OnAreaLengthChanging(System.Nullable<decimal> value);
+    partial void OnAreaLengthChanged();
+    partial void OnAreaWidthChanging(System.Nullable<decimal> value);
+    partial void OnAreaWidthChanged();
+    partial void OnTotalUsedAreaCostChanging(System.Nullable<decimal> value);
+    partial void OnTotalUsedAreaCostChanged();
+    #endregion
+		
+		public tblAtlanticFramedArea()
+		{
+			this._tblMaterial = default(EntityRef<tblMaterial>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AtlanticFramedAreaID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AtlanticFramedAreaID
+		{
+			get
+			{
+				return this._AtlanticFramedAreaID;
+			}
+			set
+			{
+				if ((this._AtlanticFramedAreaID != value))
+				{
+					this.OnAtlanticFramedAreaIDChanging(value);
+					this.SendPropertyChanging();
+					this._AtlanticFramedAreaID = value;
+					this.SendPropertyChanged("AtlanticFramedAreaID");
+					this.OnAtlanticFramedAreaIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
+		public string MaterialID
+		{
+			get
+			{
+				return this._MaterialID;
+			}
+			set
+			{
+				if ((this._MaterialID != value))
+				{
+					if (this._tblMaterial.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaterialIDChanging(value);
+					this.SendPropertyChanging();
+					this._MaterialID = value;
+					this.SendPropertyChanged("MaterialID");
+					this.OnMaterialIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricePerSqrMeter", DbType="Money")]
+		public System.Nullable<decimal> PricePerSqrMeter
+		{
+			get
+			{
+				return this._PricePerSqrMeter;
+			}
+			set
+			{
+				if ((this._PricePerSqrMeter != value))
+				{
+					this.OnPricePerSqrMeterChanging(value);
+					this.SendPropertyChanging();
+					this._PricePerSqrMeter = value;
+					this.SendPropertyChanged("PricePerSqrMeter");
+					this.OnPricePerSqrMeterChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AreaLength", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> AreaLength
+		{
+			get
+			{
+				return this._AreaLength;
+			}
+			set
+			{
+				if ((this._AreaLength != value))
+				{
+					this.OnAreaLengthChanging(value);
+					this.SendPropertyChanging();
+					this._AreaLength = value;
+					this.SendPropertyChanged("AreaLength");
+					this.OnAreaLengthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AreaWidth", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> AreaWidth
+		{
+			get
+			{
+				return this._AreaWidth;
+			}
+			set
+			{
+				if ((this._AreaWidth != value))
+				{
+					this.OnAreaWidthChanging(value);
+					this.SendPropertyChanging();
+					this._AreaWidth = value;
+					this.SendPropertyChanged("AreaWidth");
+					this.OnAreaWidthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUsedAreaCost", DbType="Money")]
+		public System.Nullable<decimal> TotalUsedAreaCost
+		{
+			get
+			{
+				return this._TotalUsedAreaCost;
+			}
+			set
+			{
+				if ((this._TotalUsedAreaCost != value))
+				{
+					this.OnTotalUsedAreaCostChanging(value);
+					this.SendPropertyChanging();
+					this._TotalUsedAreaCost = value;
+					this.SendPropertyChanged("TotalUsedAreaCost");
+					this.OnTotalUsedAreaCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedArea", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
+		public tblMaterial tblMaterial
+		{
+			get
+			{
+				return this._tblMaterial.Entity;
+			}
+			set
+			{
+				tblMaterial previousValue = this._tblMaterial.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterial.Entity = null;
+						previousValue.tblAtlanticFramedAreas.Remove(this);
+					}
+					this._tblMaterial.Entity = value;
+					if ((value != null))
+					{
+						value.tblAtlanticFramedAreas.Add(this);
+						this._MaterialID = value.MaterialID;
+					}
+					else
+					{
+						this._MaterialID = default(string);
+					}
+					this.SendPropertyChanged("tblMaterial");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblAtlanticFramedBussCost")]
+	public partial class tblAtlanticFramedBussCost : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AtlanticFramedBussCostID;
+		
+		private string _MaterialID;
+		
+		private System.Nullable<decimal> _RatePerHour;
+		
+		private System.Nullable<decimal> _HoursWorked;
+		
+		private System.Nullable<decimal> _TotalBussinessCost;
+		
+		private EntityRef<tblMaterial> _tblMaterial;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAtlanticFramedBussCostIDChanging(int value);
+    partial void OnAtlanticFramedBussCostIDChanged();
+    partial void OnMaterialIDChanging(string value);
+    partial void OnMaterialIDChanged();
+    partial void OnRatePerHourChanging(System.Nullable<decimal> value);
+    partial void OnRatePerHourChanged();
+    partial void OnHoursWorkedChanging(System.Nullable<decimal> value);
+    partial void OnHoursWorkedChanged();
+    partial void OnTotalBussinessCostChanging(System.Nullable<decimal> value);
+    partial void OnTotalBussinessCostChanged();
+    #endregion
+		
+		public tblAtlanticFramedBussCost()
+		{
+			this._tblMaterial = default(EntityRef<tblMaterial>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AtlanticFramedBussCostID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AtlanticFramedBussCostID
+		{
+			get
+			{
+				return this._AtlanticFramedBussCostID;
+			}
+			set
+			{
+				if ((this._AtlanticFramedBussCostID != value))
+				{
+					this.OnAtlanticFramedBussCostIDChanging(value);
+					this.SendPropertyChanging();
+					this._AtlanticFramedBussCostID = value;
+					this.SendPropertyChanged("AtlanticFramedBussCostID");
+					this.OnAtlanticFramedBussCostIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
+		public string MaterialID
+		{
+			get
+			{
+				return this._MaterialID;
+			}
+			set
+			{
+				if ((this._MaterialID != value))
+				{
+					if (this._tblMaterial.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaterialIDChanging(value);
+					this.SendPropertyChanging();
+					this._MaterialID = value;
+					this.SendPropertyChanged("MaterialID");
+					this.OnMaterialIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RatePerHour", DbType="Money")]
+		public System.Nullable<decimal> RatePerHour
+		{
+			get
+			{
+				return this._RatePerHour;
+			}
+			set
+			{
+				if ((this._RatePerHour != value))
+				{
+					this.OnRatePerHourChanging(value);
+					this.SendPropertyChanging();
+					this._RatePerHour = value;
+					this.SendPropertyChanged("RatePerHour");
+					this.OnRatePerHourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoursWorked", DbType="Decimal(2,2)")]
+		public System.Nullable<decimal> HoursWorked
+		{
+			get
+			{
+				return this._HoursWorked;
+			}
+			set
+			{
+				if ((this._HoursWorked != value))
+				{
+					this.OnHoursWorkedChanging(value);
+					this.SendPropertyChanging();
+					this._HoursWorked = value;
+					this.SendPropertyChanged("HoursWorked");
+					this.OnHoursWorkedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalBussinessCost", DbType="Money")]
+		public System.Nullable<decimal> TotalBussinessCost
+		{
+			get
+			{
+				return this._TotalBussinessCost;
+			}
+			set
+			{
+				if ((this._TotalBussinessCost != value))
+				{
+					this.OnTotalBussinessCostChanging(value);
+					this.SendPropertyChanging();
+					this._TotalBussinessCost = value;
+					this.SendPropertyChanged("TotalBussinessCost");
+					this.OnTotalBussinessCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedBussCost", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
+		public tblMaterial tblMaterial
+		{
+			get
+			{
+				return this._tblMaterial.Entity;
+			}
+			set
+			{
+				tblMaterial previousValue = this._tblMaterial.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterial.Entity = null;
+						previousValue.tblAtlanticFramedBussCosts.Remove(this);
+					}
+					this._tblMaterial.Entity = value;
+					if ((value != null))
+					{
+						value.tblAtlanticFramedBussCosts.Add(this);
+						this._MaterialID = value.MaterialID;
+					}
+					else
+					{
+						this._MaterialID = default(string);
+					}
+					this.SendPropertyChanged("tblMaterial");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblAtlanticFramedLength")]
+	public partial class tblAtlanticFramedLength : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AtlanticFrameLenID;
+		
+		private string _MaterialID;
+		
+		private System.Nullable<decimal> _FrameLenght;
+		
+		private System.Nullable<decimal> _FrameWidth;
+		
+		private System.Nullable<decimal> _NoOfFrames;
+		
+		private System.Nullable<decimal> _TotalUsedFrameCost;
+		
+		private System.Nullable<decimal> _FrameArea;
+		
+		private System.Nullable<decimal> _CanvasOverlap;
+		
+		private System.Nullable<decimal> _TotalCanvasArea;
+		
+		private System.Nullable<decimal> _TotalFrameLength;
+		
+		private EntityRef<tblMaterial> _tblMaterial;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAtlanticFrameLenIDChanging(int value);
+    partial void OnAtlanticFrameLenIDChanged();
+    partial void OnMaterialIDChanging(string value);
+    partial void OnMaterialIDChanged();
+    partial void OnFrameLenghtChanging(System.Nullable<decimal> value);
+    partial void OnFrameLenghtChanged();
+    partial void OnFrameWidthChanging(System.Nullable<decimal> value);
+    partial void OnFrameWidthChanged();
+    partial void OnNoOfFramesChanging(System.Nullable<decimal> value);
+    partial void OnNoOfFramesChanged();
+    partial void OnTotalUsedFrameCostChanging(System.Nullable<decimal> value);
+    partial void OnTotalUsedFrameCostChanged();
+    partial void OnFrameAreaChanging(System.Nullable<decimal> value);
+    partial void OnFrameAreaChanged();
+    partial void OnCanvasOverlapChanging(System.Nullable<decimal> value);
+    partial void OnCanvasOverlapChanged();
+    partial void OnTotalCanvasAreaChanging(System.Nullable<decimal> value);
+    partial void OnTotalCanvasAreaChanged();
+    partial void OnTotalFrameLengthChanging(System.Nullable<decimal> value);
+    partial void OnTotalFrameLengthChanged();
+    #endregion
+		
+		public tblAtlanticFramedLength()
+		{
+			this._tblMaterial = default(EntityRef<tblMaterial>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AtlanticFrameLenID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AtlanticFrameLenID
+		{
+			get
+			{
+				return this._AtlanticFrameLenID;
+			}
+			set
+			{
+				if ((this._AtlanticFrameLenID != value))
+				{
+					this.OnAtlanticFrameLenIDChanging(value);
+					this.SendPropertyChanging();
+					this._AtlanticFrameLenID = value;
+					this.SendPropertyChanged("AtlanticFrameLenID");
+					this.OnAtlanticFrameLenIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
+		public string MaterialID
+		{
+			get
+			{
+				return this._MaterialID;
+			}
+			set
+			{
+				if ((this._MaterialID != value))
+				{
+					if (this._tblMaterial.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaterialIDChanging(value);
+					this.SendPropertyChanging();
+					this._MaterialID = value;
+					this.SendPropertyChanged("MaterialID");
+					this.OnMaterialIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameLenght", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> FrameLenght
+		{
+			get
+			{
+				return this._FrameLenght;
+			}
+			set
+			{
+				if ((this._FrameLenght != value))
+				{
+					this.OnFrameLenghtChanging(value);
+					this.SendPropertyChanging();
+					this._FrameLenght = value;
+					this.SendPropertyChanged("FrameLenght");
+					this.OnFrameLenghtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameWidth", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> FrameWidth
+		{
+			get
+			{
+				return this._FrameWidth;
+			}
+			set
+			{
+				if ((this._FrameWidth != value))
+				{
+					this.OnFrameWidthChanging(value);
+					this.SendPropertyChanging();
+					this._FrameWidth = value;
+					this.SendPropertyChanged("FrameWidth");
+					this.OnFrameWidthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoOfFrames", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> NoOfFrames
+		{
+			get
+			{
+				return this._NoOfFrames;
+			}
+			set
+			{
+				if ((this._NoOfFrames != value))
+				{
+					this.OnNoOfFramesChanging(value);
+					this.SendPropertyChanging();
+					this._NoOfFrames = value;
+					this.SendPropertyChanged("NoOfFrames");
+					this.OnNoOfFramesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUsedFrameCost", DbType="Money")]
+		public System.Nullable<decimal> TotalUsedFrameCost
+		{
+			get
+			{
+				return this._TotalUsedFrameCost;
+			}
+			set
+			{
+				if ((this._TotalUsedFrameCost != value))
+				{
+					this.OnTotalUsedFrameCostChanging(value);
+					this.SendPropertyChanging();
+					this._TotalUsedFrameCost = value;
+					this.SendPropertyChanged("TotalUsedFrameCost");
+					this.OnTotalUsedFrameCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameArea", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> FrameArea
+		{
+			get
+			{
+				return this._FrameArea;
+			}
+			set
+			{
+				if ((this._FrameArea != value))
+				{
+					this.OnFrameAreaChanging(value);
+					this.SendPropertyChanging();
+					this._FrameArea = value;
+					this.SendPropertyChanged("FrameArea");
+					this.OnFrameAreaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CanvasOverlap", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> CanvasOverlap
+		{
+			get
+			{
+				return this._CanvasOverlap;
+			}
+			set
+			{
+				if ((this._CanvasOverlap != value))
+				{
+					this.OnCanvasOverlapChanging(value);
+					this.SendPropertyChanging();
+					this._CanvasOverlap = value;
+					this.SendPropertyChanged("CanvasOverlap");
+					this.OnCanvasOverlapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalCanvasArea", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> TotalCanvasArea
+		{
+			get
+			{
+				return this._TotalCanvasArea;
+			}
+			set
+			{
+				if ((this._TotalCanvasArea != value))
+				{
+					this.OnTotalCanvasAreaChanging(value);
+					this.SendPropertyChanging();
+					this._TotalCanvasArea = value;
+					this.SendPropertyChanged("TotalCanvasArea");
+					this.OnTotalCanvasAreaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalFrameLength", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> TotalFrameLength
+		{
+			get
+			{
+				return this._TotalFrameLength;
+			}
+			set
+			{
+				if ((this._TotalFrameLength != value))
+				{
+					this.OnTotalFrameLengthChanging(value);
+					this.SendPropertyChanging();
+					this._TotalFrameLength = value;
+					this.SendPropertyChanged("TotalFrameLength");
+					this.OnTotalFrameLengthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedLength", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
+		public tblMaterial tblMaterial
+		{
+			get
+			{
+				return this._tblMaterial.Entity;
+			}
+			set
+			{
+				tblMaterial previousValue = this._tblMaterial.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterial.Entity = null;
+						previousValue.tblAtlanticFramedLengths.Remove(this);
+					}
+					this._tblMaterial.Entity = value;
+					if ((value != null))
+					{
+						value.tblAtlanticFramedLengths.Add(this);
+						this._MaterialID = value.MaterialID;
+					}
+					else
+					{
+						this._MaterialID = default(string);
+					}
+					this.SendPropertyChanged("tblMaterial");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblAtlanticFramedVolume")]
+	public partial class tblAtlanticFramedVolume : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AtlanticFrmedVolumeID;
+		
+		private string _MaterialID;
+		
+		private System.Nullable<decimal> _PricePerLiter;
+		
+		private System.Nullable<decimal> _LitresUsed;
+		
+		private System.Nullable<decimal> _TotalUsedVolumeCost;
+		
+		private EntityRef<tblMaterial> _tblMaterial;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAtlanticFrmedVolumeIDChanging(int value);
+    partial void OnAtlanticFrmedVolumeIDChanged();
+    partial void OnMaterialIDChanging(string value);
+    partial void OnMaterialIDChanged();
+    partial void OnPricePerLiterChanging(System.Nullable<decimal> value);
+    partial void OnPricePerLiterChanged();
+    partial void OnLitresUsedChanging(System.Nullable<decimal> value);
+    partial void OnLitresUsedChanged();
+    partial void OnTotalUsedVolumeCostChanging(System.Nullable<decimal> value);
+    partial void OnTotalUsedVolumeCostChanged();
+    #endregion
+		
+		public tblAtlanticFramedVolume()
+		{
+			this._tblMaterial = default(EntityRef<tblMaterial>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AtlanticFrmedVolumeID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AtlanticFrmedVolumeID
+		{
+			get
+			{
+				return this._AtlanticFrmedVolumeID;
+			}
+			set
+			{
+				if ((this._AtlanticFrmedVolumeID != value))
+				{
+					this.OnAtlanticFrmedVolumeIDChanging(value);
+					this.SendPropertyChanging();
+					this._AtlanticFrmedVolumeID = value;
+					this.SendPropertyChanged("AtlanticFrmedVolumeID");
+					this.OnAtlanticFrmedVolumeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
+		public string MaterialID
+		{
+			get
+			{
+				return this._MaterialID;
+			}
+			set
+			{
+				if ((this._MaterialID != value))
+				{
+					if (this._tblMaterial.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaterialIDChanging(value);
+					this.SendPropertyChanging();
+					this._MaterialID = value;
+					this.SendPropertyChanged("MaterialID");
+					this.OnMaterialIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricePerLiter", DbType="Money")]
+		public System.Nullable<decimal> PricePerLiter
+		{
+			get
+			{
+				return this._PricePerLiter;
+			}
+			set
+			{
+				if ((this._PricePerLiter != value))
+				{
+					this.OnPricePerLiterChanging(value);
+					this.SendPropertyChanging();
+					this._PricePerLiter = value;
+					this.SendPropertyChanged("PricePerLiter");
+					this.OnPricePerLiterChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LitresUsed", DbType="Decimal(9,3)")]
+		public System.Nullable<decimal> LitresUsed
+		{
+			get
+			{
+				return this._LitresUsed;
+			}
+			set
+			{
+				if ((this._LitresUsed != value))
+				{
+					this.OnLitresUsedChanging(value);
+					this.SendPropertyChanging();
+					this._LitresUsed = value;
+					this.SendPropertyChanged("LitresUsed");
+					this.OnLitresUsedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUsedVolumeCost", DbType="Money")]
+		public System.Nullable<decimal> TotalUsedVolumeCost
+		{
+			get
+			{
+				return this._TotalUsedVolumeCost;
+			}
+			set
+			{
+				if ((this._TotalUsedVolumeCost != value))
+				{
+					this.OnTotalUsedVolumeCostChanging(value);
+					this.SendPropertyChanging();
+					this._TotalUsedVolumeCost = value;
+					this.SendPropertyChanged("TotalUsedVolumeCost");
+					this.OnTotalUsedVolumeCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedVolume", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
+		public tblMaterial tblMaterial
+		{
+			get
+			{
+				return this._tblMaterial.Entity;
+			}
+			set
+			{
+				tblMaterial previousValue = this._tblMaterial.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterial.Entity = null;
+						previousValue.tblAtlanticFramedVolumes.Remove(this);
+					}
+					this._tblMaterial.Entity = value;
+					if ((value != null))
+					{
+						value.tblAtlanticFramedVolumes.Add(this);
 						this._MaterialID = value.MaterialID;
 					}
 					else
@@ -2002,120 +2670,6 @@ namespace Engines
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblFrameType")]
-	public partial class tblFrameType : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _FrameID;
-		
-		private string _Frame_Name;
-		
-		private EntitySet<tblAtlanticCanvasLength> _tblAtlanticCanvasLengths;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnFrameIDChanging(int value);
-    partial void OnFrameIDChanged();
-    partial void OnFrame_NameChanging(string value);
-    partial void OnFrame_NameChanged();
-    #endregion
-		
-		public tblFrameType()
-		{
-			this._tblAtlanticCanvasLengths = new EntitySet<tblAtlanticCanvasLength>(new Action<tblAtlanticCanvasLength>(this.attach_tblAtlanticCanvasLengths), new Action<tblAtlanticCanvasLength>(this.detach_tblAtlanticCanvasLengths));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FrameID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int FrameID
-		{
-			get
-			{
-				return this._FrameID;
-			}
-			set
-			{
-				if ((this._FrameID != value))
-				{
-					this.OnFrameIDChanging(value);
-					this.SendPropertyChanging();
-					this._FrameID = value;
-					this.SendPropertyChanged("FrameID");
-					this.OnFrameIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Frame Name]", Storage="_Frame_Name", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string Frame_Name
-		{
-			get
-			{
-				return this._Frame_Name;
-			}
-			set
-			{
-				if ((this._Frame_Name != value))
-				{
-					this.OnFrame_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Frame_Name = value;
-					this.SendPropertyChanged("Frame_Name");
-					this.OnFrame_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblFrameType_tblAtlanticCanvasLength", Storage="_tblAtlanticCanvasLengths", ThisKey="FrameID", OtherKey="FrameID")]
-		public EntitySet<tblAtlanticCanvasLength> tblAtlanticCanvasLengths
-		{
-			get
-			{
-				return this._tblAtlanticCanvasLengths;
-			}
-			set
-			{
-				this._tblAtlanticCanvasLengths.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_tblAtlanticCanvasLengths(tblAtlanticCanvasLength entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblFrameType = this;
-		}
-		
-		private void detach_tblAtlanticCanvasLengths(tblAtlanticCanvasLength entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblFrameType = null;
 		}
 	}
 	
@@ -2447,8 +3001,6 @@ namespace Engines
 		
 		private EntitySet<tblAreaCost> _tblAreaCosts;
 		
-		private EntitySet<tblVolumeCost> _tblVolumeCosts;
-		
 		private EntitySet<tblAtlanticCanvasArea> _tblAtlanticCanvasAreas;
 		
 		private EntitySet<tblAtlanticCanvasBussCost> _tblAtlanticCanvasBussCosts;
@@ -2457,9 +3009,19 @@ namespace Engines
 		
 		private EntitySet<tblAtlanticCanvasVolume> _tblAtlanticCanvasVolumes;
 		
+		private EntitySet<tblAtlanticFramedArea> _tblAtlanticFramedAreas;
+		
+		private EntitySet<tblAtlanticFramedBussCost> _tblAtlanticFramedBussCosts;
+		
+		private EntitySet<tblAtlanticFramedLength> _tblAtlanticFramedLengths;
+		
+		private EntitySet<tblAtlanticFramedVolume> _tblAtlanticFramedVolumes;
+		
 		private EntitySet<tblBussinessCost> _tblBussinessCosts;
 		
 		private EntitySet<tblLengthCost> _tblLengthCosts;
+		
+		private EntitySet<tblVolumeCost> _tblVolumeCosts;
 		
 		private EntityRef<tblMaterialType> _tblMaterialType;
 		
@@ -2480,13 +3042,17 @@ namespace Engines
 		public tblMaterial()
 		{
 			this._tblAreaCosts = new EntitySet<tblAreaCost>(new Action<tblAreaCost>(this.attach_tblAreaCosts), new Action<tblAreaCost>(this.detach_tblAreaCosts));
-			this._tblVolumeCosts = new EntitySet<tblVolumeCost>(new Action<tblVolumeCost>(this.attach_tblVolumeCosts), new Action<tblVolumeCost>(this.detach_tblVolumeCosts));
 			this._tblAtlanticCanvasAreas = new EntitySet<tblAtlanticCanvasArea>(new Action<tblAtlanticCanvasArea>(this.attach_tblAtlanticCanvasAreas), new Action<tblAtlanticCanvasArea>(this.detach_tblAtlanticCanvasAreas));
 			this._tblAtlanticCanvasBussCosts = new EntitySet<tblAtlanticCanvasBussCost>(new Action<tblAtlanticCanvasBussCost>(this.attach_tblAtlanticCanvasBussCosts), new Action<tblAtlanticCanvasBussCost>(this.detach_tblAtlanticCanvasBussCosts));
 			this._tblAtlanticCanvasLengths = new EntitySet<tblAtlanticCanvasLength>(new Action<tblAtlanticCanvasLength>(this.attach_tblAtlanticCanvasLengths), new Action<tblAtlanticCanvasLength>(this.detach_tblAtlanticCanvasLengths));
 			this._tblAtlanticCanvasVolumes = new EntitySet<tblAtlanticCanvasVolume>(new Action<tblAtlanticCanvasVolume>(this.attach_tblAtlanticCanvasVolumes), new Action<tblAtlanticCanvasVolume>(this.detach_tblAtlanticCanvasVolumes));
+			this._tblAtlanticFramedAreas = new EntitySet<tblAtlanticFramedArea>(new Action<tblAtlanticFramedArea>(this.attach_tblAtlanticFramedAreas), new Action<tblAtlanticFramedArea>(this.detach_tblAtlanticFramedAreas));
+			this._tblAtlanticFramedBussCosts = new EntitySet<tblAtlanticFramedBussCost>(new Action<tblAtlanticFramedBussCost>(this.attach_tblAtlanticFramedBussCosts), new Action<tblAtlanticFramedBussCost>(this.detach_tblAtlanticFramedBussCosts));
+			this._tblAtlanticFramedLengths = new EntitySet<tblAtlanticFramedLength>(new Action<tblAtlanticFramedLength>(this.attach_tblAtlanticFramedLengths), new Action<tblAtlanticFramedLength>(this.detach_tblAtlanticFramedLengths));
+			this._tblAtlanticFramedVolumes = new EntitySet<tblAtlanticFramedVolume>(new Action<tblAtlanticFramedVolume>(this.attach_tblAtlanticFramedVolumes), new Action<tblAtlanticFramedVolume>(this.detach_tblAtlanticFramedVolumes));
 			this._tblBussinessCosts = new EntitySet<tblBussinessCost>(new Action<tblBussinessCost>(this.attach_tblBussinessCosts), new Action<tblBussinessCost>(this.detach_tblBussinessCosts));
 			this._tblLengthCosts = new EntitySet<tblLengthCost>(new Action<tblLengthCost>(this.attach_tblLengthCosts), new Action<tblLengthCost>(this.detach_tblLengthCosts));
+			this._tblVolumeCosts = new EntitySet<tblVolumeCost>(new Action<tblVolumeCost>(this.attach_tblVolumeCosts), new Action<tblVolumeCost>(this.detach_tblVolumeCosts));
 			this._tblMaterialType = default(EntityRef<tblMaterialType>);
 			OnCreated();
 		}
@@ -2588,19 +3154,6 @@ namespace Engines
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblVolumeCost", Storage="_tblVolumeCosts", ThisKey="MaterialID", OtherKey="MaterialID")]
-		public EntitySet<tblVolumeCost> tblVolumeCosts
-		{
-			get
-			{
-				return this._tblVolumeCosts;
-			}
-			set
-			{
-				this._tblVolumeCosts.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticCanvasArea", Storage="_tblAtlanticCanvasAreas", ThisKey="MaterialID", OtherKey="MaterialID")]
 		public EntitySet<tblAtlanticCanvasArea> tblAtlanticCanvasAreas
 		{
@@ -2653,6 +3206,58 @@ namespace Engines
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedArea", Storage="_tblAtlanticFramedAreas", ThisKey="MaterialID", OtherKey="MaterialID")]
+		public EntitySet<tblAtlanticFramedArea> tblAtlanticFramedAreas
+		{
+			get
+			{
+				return this._tblAtlanticFramedAreas;
+			}
+			set
+			{
+				this._tblAtlanticFramedAreas.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedBussCost", Storage="_tblAtlanticFramedBussCosts", ThisKey="MaterialID", OtherKey="MaterialID")]
+		public EntitySet<tblAtlanticFramedBussCost> tblAtlanticFramedBussCosts
+		{
+			get
+			{
+				return this._tblAtlanticFramedBussCosts;
+			}
+			set
+			{
+				this._tblAtlanticFramedBussCosts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedLength", Storage="_tblAtlanticFramedLengths", ThisKey="MaterialID", OtherKey="MaterialID")]
+		public EntitySet<tblAtlanticFramedLength> tblAtlanticFramedLengths
+		{
+			get
+			{
+				return this._tblAtlanticFramedLengths;
+			}
+			set
+			{
+				this._tblAtlanticFramedLengths.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblAtlanticFramedVolume", Storage="_tblAtlanticFramedVolumes", ThisKey="MaterialID", OtherKey="MaterialID")]
+		public EntitySet<tblAtlanticFramedVolume> tblAtlanticFramedVolumes
+		{
+			get
+			{
+				return this._tblAtlanticFramedVolumes;
+			}
+			set
+			{
+				this._tblAtlanticFramedVolumes.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblBussinessCost", Storage="_tblBussinessCosts", ThisKey="MaterialID", OtherKey="MaterialID")]
 		public EntitySet<tblBussinessCost> tblBussinessCosts
 		{
@@ -2676,6 +3281,19 @@ namespace Engines
 			set
 			{
 				this._tblLengthCosts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblVolumeCost", Storage="_tblVolumeCosts", ThisKey="MaterialID", OtherKey="MaterialID")]
+		public EntitySet<tblVolumeCost> tblVolumeCosts
+		{
+			get
+			{
+				return this._tblVolumeCosts;
+			}
+			set
+			{
+				this._tblVolumeCosts.Assign(value);
 			}
 		}
 		
@@ -2745,18 +3363,6 @@ namespace Engines
 			entity.tblMaterial = null;
 		}
 		
-		private void attach_tblVolumeCosts(tblVolumeCost entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblMaterial = this;
-		}
-		
-		private void detach_tblVolumeCosts(tblVolumeCost entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblMaterial = null;
-		}
-		
 		private void attach_tblAtlanticCanvasAreas(tblAtlanticCanvasArea entity)
 		{
 			this.SendPropertyChanging();
@@ -2805,6 +3411,54 @@ namespace Engines
 			entity.tblMaterial = null;
 		}
 		
+		private void attach_tblAtlanticFramedAreas(tblAtlanticFramedArea entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = this;
+		}
+		
+		private void detach_tblAtlanticFramedAreas(tblAtlanticFramedArea entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = null;
+		}
+		
+		private void attach_tblAtlanticFramedBussCosts(tblAtlanticFramedBussCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = this;
+		}
+		
+		private void detach_tblAtlanticFramedBussCosts(tblAtlanticFramedBussCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = null;
+		}
+		
+		private void attach_tblAtlanticFramedLengths(tblAtlanticFramedLength entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = this;
+		}
+		
+		private void detach_tblAtlanticFramedLengths(tblAtlanticFramedLength entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = null;
+		}
+		
+		private void attach_tblAtlanticFramedVolumes(tblAtlanticFramedVolume entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = this;
+		}
+		
+		private void detach_tblAtlanticFramedVolumes(tblAtlanticFramedVolume entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = null;
+		}
+		
 		private void attach_tblBussinessCosts(tblBussinessCost entity)
 		{
 			this.SendPropertyChanging();
@@ -2828,6 +3482,18 @@ namespace Engines
 			this.SendPropertyChanging();
 			entity.tblMaterial = null;
 		}
+		
+		private void attach_tblVolumeCosts(tblVolumeCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = this;
+		}
+		
+		private void detach_tblVolumeCosts(tblVolumeCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterial = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblMaterialType")]
@@ -2842,13 +3508,13 @@ namespace Engines
 		
 		private EntitySet<tblAreaCost> _tblAreaCosts;
 		
-		private EntitySet<tblVolumeCost> _tblVolumeCosts;
-		
 		private EntitySet<tblBussinessCost> _tblBussinessCosts;
 		
 		private EntitySet<tblLengthCost> _tblLengthCosts;
 		
 		private EntitySet<tblMaterial> _tblMaterials;
+		
+		private EntitySet<tblVolumeCost> _tblVolumeCosts;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2863,10 +3529,10 @@ namespace Engines
 		public tblMaterialType()
 		{
 			this._tblAreaCosts = new EntitySet<tblAreaCost>(new Action<tblAreaCost>(this.attach_tblAreaCosts), new Action<tblAreaCost>(this.detach_tblAreaCosts));
-			this._tblVolumeCosts = new EntitySet<tblVolumeCost>(new Action<tblVolumeCost>(this.attach_tblVolumeCosts), new Action<tblVolumeCost>(this.detach_tblVolumeCosts));
 			this._tblBussinessCosts = new EntitySet<tblBussinessCost>(new Action<tblBussinessCost>(this.attach_tblBussinessCosts), new Action<tblBussinessCost>(this.detach_tblBussinessCosts));
 			this._tblLengthCosts = new EntitySet<tblLengthCost>(new Action<tblLengthCost>(this.attach_tblLengthCosts), new Action<tblLengthCost>(this.detach_tblLengthCosts));
 			this._tblMaterials = new EntitySet<tblMaterial>(new Action<tblMaterial>(this.attach_tblMaterials), new Action<tblMaterial>(this.detach_tblMaterials));
+			this._tblVolumeCosts = new EntitySet<tblVolumeCost>(new Action<tblVolumeCost>(this.attach_tblVolumeCosts), new Action<tblVolumeCost>(this.detach_tblVolumeCosts));
 			OnCreated();
 		}
 		
@@ -2923,19 +3589,6 @@ namespace Engines
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterialType_tblVolumeCost", Storage="_tblVolumeCosts", ThisKey="TypeID", OtherKey="TypeID")]
-		public EntitySet<tblVolumeCost> tblVolumeCosts
-		{
-			get
-			{
-				return this._tblVolumeCosts;
-			}
-			set
-			{
-				this._tblVolumeCosts.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterialType_tblBussinessCost", Storage="_tblBussinessCosts", ThisKey="TypeID", OtherKey="TypeID")]
 		public EntitySet<tblBussinessCost> tblBussinessCosts
 		{
@@ -2975,6 +3628,19 @@ namespace Engines
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterialType_tblVolumeCost", Storage="_tblVolumeCosts", ThisKey="TypeID", OtherKey="TypeID")]
+		public EntitySet<tblVolumeCost> tblVolumeCosts
+		{
+			get
+			{
+				return this._tblVolumeCosts;
+			}
+			set
+			{
+				this._tblVolumeCosts.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -3002,18 +3668,6 @@ namespace Engines
 		}
 		
 		private void detach_tblAreaCosts(tblAreaCost entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblMaterialType = null;
-		}
-		
-		private void attach_tblVolumeCosts(tblVolumeCost entity)
-		{
-			this.SendPropertyChanging();
-			entity.tblMaterialType = this;
-		}
-		
-		private void detach_tblVolumeCosts(tblVolumeCost entity)
 		{
 			this.SendPropertyChanging();
 			entity.tblMaterialType = null;
@@ -3053,6 +3707,282 @@ namespace Engines
 		{
 			this.SendPropertyChanging();
 			entity.tblMaterialType = null;
+		}
+		
+		private void attach_tblVolumeCosts(tblVolumeCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterialType = this;
+		}
+		
+		private void detach_tblVolumeCosts(tblVolumeCost entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblMaterialType = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblVolumeCost")]
+	public partial class tblVolumeCost : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _VolumeCostID;
+		
+		private int _TypeID;
+		
+		private string _MaterialID;
+		
+		private System.Nullable<decimal> _TotalVolume;
+		
+		private System.Nullable<decimal> _PricePerLiter;
+		
+		private System.Nullable<decimal> _TotalCost;
+		
+		private EntityRef<tblMaterial> _tblMaterial;
+		
+		private EntityRef<tblMaterialType> _tblMaterialType;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnVolumeCostIDChanging(int value);
+    partial void OnVolumeCostIDChanged();
+    partial void OnTypeIDChanging(int value);
+    partial void OnTypeIDChanged();
+    partial void OnMaterialIDChanging(string value);
+    partial void OnMaterialIDChanged();
+    partial void OnTotalVolumeChanging(System.Nullable<decimal> value);
+    partial void OnTotalVolumeChanged();
+    partial void OnPricePerLiterChanging(System.Nullable<decimal> value);
+    partial void OnPricePerLiterChanged();
+    partial void OnTotalCostChanging(System.Nullable<decimal> value);
+    partial void OnTotalCostChanged();
+    #endregion
+		
+		public tblVolumeCost()
+		{
+			this._tblMaterial = default(EntityRef<tblMaterial>);
+			this._tblMaterialType = default(EntityRef<tblMaterialType>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VolumeCostID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int VolumeCostID
+		{
+			get
+			{
+				return this._VolumeCostID;
+			}
+			set
+			{
+				if ((this._VolumeCostID != value))
+				{
+					this.OnVolumeCostIDChanging(value);
+					this.SendPropertyChanging();
+					this._VolumeCostID = value;
+					this.SendPropertyChanged("VolumeCostID");
+					this.OnVolumeCostIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int NOT NULL")]
+		public int TypeID
+		{
+			get
+			{
+				return this._TypeID;
+			}
+			set
+			{
+				if ((this._TypeID != value))
+				{
+					if (this._tblMaterialType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._TypeID = value;
+					this.SendPropertyChanged("TypeID");
+					this.OnTypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaterialID", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
+		public string MaterialID
+		{
+			get
+			{
+				return this._MaterialID;
+			}
+			set
+			{
+				if ((this._MaterialID != value))
+				{
+					if (this._tblMaterial.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaterialIDChanging(value);
+					this.SendPropertyChanging();
+					this._MaterialID = value;
+					this.SendPropertyChanged("MaterialID");
+					this.OnMaterialIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalVolume", DbType="Decimal(9,2)")]
+		public System.Nullable<decimal> TotalVolume
+		{
+			get
+			{
+				return this._TotalVolume;
+			}
+			set
+			{
+				if ((this._TotalVolume != value))
+				{
+					this.OnTotalVolumeChanging(value);
+					this.SendPropertyChanging();
+					this._TotalVolume = value;
+					this.SendPropertyChanged("TotalVolume");
+					this.OnTotalVolumeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PricePerLiter", DbType="Money")]
+		public System.Nullable<decimal> PricePerLiter
+		{
+			get
+			{
+				return this._PricePerLiter;
+			}
+			set
+			{
+				if ((this._PricePerLiter != value))
+				{
+					this.OnPricePerLiterChanging(value);
+					this.SendPropertyChanging();
+					this._PricePerLiter = value;
+					this.SendPropertyChanged("PricePerLiter");
+					this.OnPricePerLiterChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalCost", DbType="Money")]
+		public System.Nullable<decimal> TotalCost
+		{
+			get
+			{
+				return this._TotalCost;
+			}
+			set
+			{
+				if ((this._TotalCost != value))
+				{
+					this.OnTotalCostChanging(value);
+					this.SendPropertyChanging();
+					this._TotalCost = value;
+					this.SendPropertyChanged("TotalCost");
+					this.OnTotalCostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterial_tblVolumeCost", Storage="_tblMaterial", ThisKey="MaterialID", OtherKey="MaterialID", IsForeignKey=true)]
+		public tblMaterial tblMaterial
+		{
+			get
+			{
+				return this._tblMaterial.Entity;
+			}
+			set
+			{
+				tblMaterial previousValue = this._tblMaterial.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterial.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterial.Entity = null;
+						previousValue.tblVolumeCosts.Remove(this);
+					}
+					this._tblMaterial.Entity = value;
+					if ((value != null))
+					{
+						value.tblVolumeCosts.Add(this);
+						this._MaterialID = value.MaterialID;
+					}
+					else
+					{
+						this._MaterialID = default(string);
+					}
+					this.SendPropertyChanged("tblMaterial");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblMaterialType_tblVolumeCost", Storage="_tblMaterialType", ThisKey="TypeID", OtherKey="TypeID", IsForeignKey=true)]
+		public tblMaterialType tblMaterialType
+		{
+			get
+			{
+				return this._tblMaterialType.Entity;
+			}
+			set
+			{
+				tblMaterialType previousValue = this._tblMaterialType.Entity;
+				if (((previousValue != value) 
+							|| (this._tblMaterialType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblMaterialType.Entity = null;
+						previousValue.tblVolumeCosts.Remove(this);
+					}
+					this._tblMaterialType.Entity = value;
+					if ((value != null))
+					{
+						value.tblVolumeCosts.Add(this);
+						this._TypeID = value.TypeID;
+					}
+					else
+					{
+						this._TypeID = default(int);
+					}
+					this.SendPropertyChanged("tblMaterialType");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

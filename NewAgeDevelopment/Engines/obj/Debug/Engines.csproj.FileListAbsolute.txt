@@ -16,15 +16,3 @@ D:\GIT Central\smartydevelopmentrepo\NewAgeDevelopment\Engines\bin\Debug\Engines
 D:\GIT Central\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.csprojResolveAssemblyReference.cache
 D:\GIT Central\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.dll
 D:\GIT Central\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.pdb
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\bin\Debug\Engines.dll.config
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\bin\Debug\Engines.dll
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\bin\Debug\Engines.pdb
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.csprojResolveAssemblyReference.cache
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.dll
-D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.pdb
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.dll.config
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.dll
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.pdb
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.csprojResolveAssemblyReference.cache
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.dll
-D:\GIT Central\Hub\NewAgeDevelopmentHub\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.pdb

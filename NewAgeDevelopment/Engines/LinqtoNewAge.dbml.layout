@@ -1,169 +1,208 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 20.375" name="LinqtoNewAge">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 33" name="LinqtoNewAge">
   <DataContextMoniker Name="/LinqtoNewAgeDataContext" />
   <nestedChildShapes>
-    <classShape Id="36d19a04-c0ec-4094-822a-09c60a36f049" absoluteBounds="6.25, 5.75, 2, 2.3478011067708344">
+    <classShape Id="05b47ba4-da24-43c1-8c4f-059503e26274" absoluteBounds="9.25, 21, 2, 2.3478011067708309">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAreaCost" />
       <nestedChildShapes>
-        <elementListCompartment Id="fd91a977-f449-445b-9901-827e69c3d41d" absoluteBounds="6.265, 6.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2aa58040-5da5-4aeb-a5c1-76a0088bf73e" absoluteBounds="9.265, 21.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3e573230-f8b6-4fe2-b5a9-4732da714cf2" absoluteBounds="9.25, 16, 2, 1.9631982421875023">
-      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblVolumeCost" />
-      <nestedChildShapes>
-        <elementListCompartment Id="0724cf84-3b09-4943-b0fd-879ae8d8576b" absoluteBounds="9.265, 16.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="0a77695f-208d-4226-8780-96beca717353" absoluteBounds="6.25, 14.5, 2, 1.9631982421874987">
+    <classShape Id="b9a0fdd8-d4dc-46ed-bfab-2b5e892ccb1c" absoluteBounds="6.25, 18.25, 2, 1.9631982421875023">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticCanvasArea" />
       <nestedChildShapes>
-        <elementListCompartment Id="58321c7a-421e-4158-9d95-e22e3024f67a" absoluteBounds="6.265, 14.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="13c2711c-db4f-4c05-8b0e-8fd39d9bd7f5" absoluteBounds="6.265, 18.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="8d79544d-583a-46f6-ab17-c4e5c2a6134f" absoluteBounds="6.25, 9.5, 2, 1.7708968098958344">
+    <classShape Id="b276fdfa-aba1-4ddf-9048-9fe27830669b" absoluteBounds="6.25, 8.25, 2, 1.7708968098958344">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticCanvasBussCost" />
       <nestedChildShapes>
-        <elementListCompartment Id="b03b391a-6ee9-45b6-a799-d7acd29e3bce" absoluteBounds="6.265, 9.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="40e75d87-1e1d-4560-a3bb-0a93203b926d" absoluteBounds="6.265, 8.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="44343359-0a5d-4db5-9a20-bcc8b42dd681" absoluteBounds="9.25, 11.5, 2, 2.9247054036458309">
+    <classShape Id="6a63b171-2dd6-40b0-9b67-2a8bdc7b3c8a" absoluteBounds="6.25, 29.875, 2, 2.9247054036458309">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticCanvasLength" />
       <nestedChildShapes>
-        <elementListCompartment Id="43d55db1-33a8-4882-947b-5bbc0ca607bc" absoluteBounds="9.265, 11.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="28bbbafc-ce3f-4279-8dc6-77ca4d39078f" absoluteBounds="6.265, 30.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7904bf69-e410-4abb-806a-e6d808a28e69" absoluteBounds="6.25, 12, 2, 1.7708968098958344">
+    <classShape Id="80ceb87b-dcd0-438d-af69-5640ac258e25" absoluteBounds="6.25, 10.75, 2, 1.7708968098958344">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticCanvasVolume" />
       <nestedChildShapes>
-        <elementListCompartment Id="b612a5dc-8b31-4611-a506-45f0474f4c1b" absoluteBounds="6.265, 12.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="81a7463e-fd9b-4a7b-bb5b-7c688e8e2e61" absoluteBounds="6.265, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b0ec004f-8b7e-4ff5-9b76-e9da6c0209df" absoluteBounds="9.25, 8.125, 2, 1.7708968098958344">
+    <classShape Id="08149b1d-61f0-4834-b486-a458b6506425" absoluteBounds="6.25, 21, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticFramedArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53c43b07-80ab-4f8d-85f4-e588fe16401f" absoluteBounds="6.265, 21.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30d561a6-9579-4433-b683-89b4bf6a7932" absoluteBounds="6.25, 13.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticFramedBussCost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="531c29f6-2867-4f8e-bb2b-ba16a6b9703f" absoluteBounds="6.265, 13.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50dbb23e-397b-483d-9975-a99fa318f401" absoluteBounds="6.25, 26.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticFramedLength" />
+      <nestedChildShapes>
+        <elementListCompartment Id="891f0d36-aa6b-4e84-a63e-499a267e3a47" absoluteBounds="6.265, 26.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4290b482-27d8-4cee-a9d0-1927b0a8cf7f" absoluteBounds="6.25, 15.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblAtlanticFramedVolume" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2f55440-fe14-437a-8989-a6d7d325dd33" absoluteBounds="6.265, 16.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2085dc03-1b11-4731-ba00-7df4ceec9654" absoluteBounds="9.25, 15.25, 2, 1.7708968098958327">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblBussinessCost" />
       <nestedChildShapes>
-        <elementListCompartment Id="f7cc345b-aadf-4896-a51b-6348296d4c16" absoluteBounds="9.265, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="237705c3-e2c9-48cf-802e-45ed544cf854" absoluteBounds="9.265, 15.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fdf91fee-b737-4407-94b2-638108b78343" absoluteBounds="6.5, 3.375, 2, 1.193992513020834">
-      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblFrameType" />
-      <nestedChildShapes>
-        <elementListCompartment Id="66bc6067-a2f4-4044-b047-e30277b923b6" absoluteBounds="6.515, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="16db71a6-9ed3-494c-a981-57fd2fa541b7" absoluteBounds="6.25, 17.75, 2, 2.3478011067708309">
+    <classShape Id="4ff92930-2c48-4cbd-9fba-5dedd4c8be7e" absoluteBounds="9.25, 12, 2, 2.3478011067708344">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblLengthCost" />
       <nestedChildShapes>
-        <elementListCompartment Id="18c28f27-4117-4cca-8e42-cb6580ed04b7" absoluteBounds="6.265, 18.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f7824ffb-5e27-4687-9d31-2ed797457728" absoluteBounds="9.265, 12.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="94dbfb6d-a754-444e-b497-8db1fe110e46" absoluteBounds="3.5, 12.25, 2, 1.5785953776041666">
+    <classShape Id="b81d902c-d109-42ef-918f-f13904a58e92" absoluteBounds="3.5, 18.375, 2, 1.5785953776041666">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblMaterial" />
       <nestedChildShapes>
-        <elementListCompartment Id="cbea1b39-fc97-427d-a4a7-c2f36b1b4a23" absoluteBounds="3.515, 12.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b526e03c-9280-430d-95fa-ea0c0a14f478" absoluteBounds="3.515, 18.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="267cb27b-527e-4b28-af86-367b53b58967" absoluteBounds="0.75, 12.375, 2, 1.1939925130208344">
+    <classShape Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" absoluteBounds="0.75, 18.625, 2, 1.1939925130208309">
       <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType" />
       <nestedChildShapes>
-        <elementListCompartment Id="7d774cf7-7684-4cec-a0ea-fe5e4c7dfcca" absoluteBounds="0.765, 12.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6eab3be3-2453-4ff8-90b8-7e9ea01ecd1b" absoluteBounds="0.765, 19.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.40625 : 4.56899251302083); (8.40625 : 14.1290511067708); (9.25 : 14.1290511067708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblFrameType/tblFrameType_tblAtlanticCanvasLength" />
-      <nodes>
-        <classShapeMoniker Id="fdf91fee-b737-4407-94b2-638108b78343" />
-        <classShapeMoniker Id="44343359-0a5d-4db5-9a20-bcc8b42dd681" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 12.25); (4.5 : 6.92390055338542); (6.25 : 6.92390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="7711cbc0-b8b7-4608-b140-cc2629171893" absoluteBounds="9.25, 18.125, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/LinqtoNewAgeDataContext/tblVolumeCost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c6bd3eb-26de-4e5b-8029-0941a32ed974" absoluteBounds="9.265, 18.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 19.9535953776042); (4.5 : 23.1867496744792); (4.94791916666667 : 23.1867496744792 : JumpStart); (5.11458583333333 : 23.1867496744792 : JumpEnd); (5.21354541666667 : 23.1867496744792 : JumpStart); (5.38021208333333 : 23.1867496744792 : JumpEnd); (9.25 : 23.1867496744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAreaCost" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="36d19a04-c0ec-4094-822a-09c60a36f049" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="05b47ba4-da24-43c1-8c4f-059503e26274" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 13.8285953776042); (4.5 : 17.1065991210938); (5.21354541666667 : 17.1065991210938 : JumpStart); (5.38021208333333 : 17.1065991210938 : JumpEnd); (9.25 : 17.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblVolumeCost" />
-      <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="3e573230-f8b6-4fe2-b5a9-4732da714cf2" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5.0312525 : 13.8285953776042); (5.0312525 : 15.4815991210937); (5.21354541666667 : 15.4815991210937 : JumpStart); (5.38021208333333 : 15.4815991210937 : JumpEnd); (6.25 : 15.4815991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 19.1642976888021); (6.25 : 19.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticCanvasArea" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="0a77695f-208d-4226-8780-96beca717353" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="b9a0fdd8-d4dc-46ed-bfab-2b5e892ccb1c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.0312525 : 12.25); (5.0312525 : 10.3854484049479); (6.25 : 10.3854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5 : 18.375); (4.5 : 9.13544840494792); (6.25 : 9.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticCanvasBussCost" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="8d79544d-583a-46f6-ab17-c4e5c2a6134f" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="b276fdfa-aba1-4ddf-9048-9fe27830669b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.9687475 : 13.8285953776042); (3.9687475 : 14.3081307552083); (4.41666666666667 : 14.3081307552083 : JumpStart); (4.58333333333333 : 14.3081307552083 : JumpEnd); (4.94791916666667 : 14.3081307552083 : JumpStart); (5.11458583333333 : 14.3081307552083 : JumpEnd); (5.21354541666667 : 14.3081307552083 : JumpStart); (5.38021208333333 : 14.3081307552083 : JumpEnd); (9.25 : 14.3081307552083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.0312525 : 19.9535953776042); (5.0312525 : 31.3373527018229); (6.25 : 31.3373527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticCanvasLength" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="44343359-0a5d-4db5-9a20-bcc8b42dd681" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="6a63b171-2dd6-40b0-9b67-2a8bdc7b3c8a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 13.0104484049479); (6.25 : 13.0104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.0312525 : 18.375); (5.0312525 : 11.6354484049479); (6.25 : 11.6354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticCanvasVolume" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="7904bf69-e410-4abb-806a-e6d808a28e69" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="80ceb87b-dcd0-438d-af69-5640ac258e25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.9687475 : 12.25); (3.9687475 : 8.78125); (4.41666666666667 : 8.78125 : JumpStart); (4.58333333333333 : 8.78125 : JumpEnd); (8.32291666666667 : 8.78125 : JumpStart); (8.48958333333333 : 8.78125 : JumpEnd); (9.25 : 8.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.9687475 : 19.9535953776042); (3.9687475 : 21.9815991210938); (4.41666666666667 : 21.9815991210938 : JumpStart); (4.58333333333333 : 21.9815991210938 : JumpEnd); (4.94791916666667 : 21.9815991210938 : JumpStart); (5.11458583333333 : 21.9815991210938 : JumpEnd); (5.21354541666667 : 21.9815991210938 : JumpStart); (5.38021208333333 : 21.9815991210938 : JumpEnd); (6.25 : 21.9815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticFramedArea" />
+      <nodes>
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="08149b1d-61f0-4834-b486-a458b6506425" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.9687475 : 18.375); (3.9687475 : 14.1354484049479); (4.15104041666667 : 14.1354484049479 : JumpStart); (4.31770708333333 : 14.1354484049479 : JumpEnd); (4.41666666666667 : 14.1354484049479 : JumpStart); (4.58333333333333 : 14.1354484049479 : JumpEnd); (4.94791916666667 : 14.1354484049479 : JumpStart); (5.11458583333333 : 14.1354484049479 : JumpEnd); (6.25 : 14.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticFramedBussCost" />
+      <nodes>
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="30d561a6-9579-4433-b683-89b4bf6a7932" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.29687875 : 19.9535953776042); (5.29687875 : 27.7412019856771); (6.25 : 27.7412019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticFramedLength" />
+      <nodes>
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="50dbb23e-397b-483d-9975-a99fa318f401" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.29687875 : 18.375); (5.29687875 : 16.6354484049479); (6.25 : 16.6354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblAtlanticFramedVolume" />
+      <nodes>
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="4290b482-27d8-4cee-a9d0-1927b0a8cf7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.76562625 : 18.375); (4.76562625 : 15.46875); (4.94791916666667 : 15.46875 : JumpStart); (5.11458583333333 : 15.46875 : JumpEnd); (9.25 : 15.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblBussinessCost" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="b0ec004f-8b7e-4ff5-9b76-e9da6c0209df" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="2085dc03-1b11-4731-ba00-7df4ceec9654" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.29687875 : 13.8285953776042); (5.29687875 : 18.9239005533854); (6.25 : 18.9239005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.23437375 : 18.375); (4.23437375 : 12.8854484049479); (4.41666666666667 : 12.8854484049479 : JumpStart); (4.58333333333333 : 12.8854484049479 : JumpEnd); (4.94791916666667 : 12.8854484049479 : JumpStart); (5.11458583333333 : 12.8854484049479 : JumpEnd); (9.25 : 12.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblLengthCost" />
       <nodes>
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
-        <classShapeMoniker Id="16db71a6-9ed3-494c-a981-57fd2fa541b7" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="4ff92930-2c48-4cbd-9fba-5dedd4c8be7e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 12.375); (1.75 : 7.54210333007813); (4.41666666666667 : 7.54210333007812 : JumpStart); (4.58333333333333 : 7.54210333007813 : JumpEnd); (6.25 : 7.54210333007813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 19.8189925130208); (1.75 : 23.0749714583333); (4.41666666666667 : 23.0749714583333 : JumpStart); (4.58333333333333 : 23.0749714583333 : JumpEnd); (4.94791916666667 : 23.0749714583333 : JumpStart); (5.11458583333333 : 23.0749714583333 : JumpEnd); (5.21354541666667 : 23.0749714583333 : JumpStart); (5.38021208333333 : 23.0749714583333 : JumpEnd); (9.25 : 23.0749714583333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblAreaCost" />
       <nodes>
-        <classShapeMoniker Id="267cb27b-527e-4b28-af86-367b53b58967" />
-        <classShapeMoniker Id="36d19a04-c0ec-4094-822a-09c60a36f049" />
+        <classShapeMoniker Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" />
+        <classShapeMoniker Id="05b47ba4-da24-43c1-8c4f-059503e26274" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 13.5689925130208); (1.75 : 16.7848961816406); (2.19791916666667 : 16.7848961816406 : JumpStart); (2.36458583333333 : 16.7848961816406 : JumpEnd); (4.41666666666667 : 16.7848961816406 : JumpStart); (4.58333333333333 : 16.7848961816406 : JumpEnd); (5.21354541666667 : 16.7848961816406 : JumpStart); (5.38021208333333 : 16.7848961816406 : JumpEnd); (9.25 : 16.7848961816406)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblVolumeCost" />
-      <nodes>
-        <classShapeMoniker Id="267cb27b-527e-4b28-af86-367b53b58967" />
-        <classShapeMoniker Id="3e573230-f8b6-4fe2-b5a9-4732da714cf2" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.2812525 : 12.375); (2.2812525 : 9.1406275); (3.88541416666667 : 9.1406275 : JumpStart); (4.05208083333333 : 9.1406275 : JumpEnd); (4.41666666666667 : 9.1406275 : JumpStart); (4.58333333333333 : 9.1406275 : JumpEnd); (8.32291666666667 : 9.1406275 : JumpStart); (8.48958333333333 : 9.1406275 : JumpEnd); (9.25 : 9.1406275)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 18.625); (1.75 : 15.6093775); (2.19791916666667 : 15.6093775 : JumpStart); (2.36458583333333 : 15.6093775 : JumpEnd); (3.88541416666667 : 15.6093775 : JumpStart); (4.05208083333333 : 15.6093775 : JumpEnd); (4.15104041666667 : 15.6093775 : JumpStart); (4.31770708333333 : 15.6093775 : JumpEnd); (4.41666666666667 : 15.6093775 : JumpStart); (4.58333333333333 : 15.6093775 : JumpEnd); (4.68229291666667 : 15.6093775 : JumpStart); (4.84895958333333 : 15.6093775 : JumpEnd); (4.94791916666667 : 15.6093775 : JumpStart); (5.11458583333333 : 15.6093775 : JumpEnd); (9.25 : 15.6093775)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblBussinessCost" />
       <nodes>
-        <classShapeMoniker Id="267cb27b-527e-4b28-af86-367b53b58967" />
-        <classShapeMoniker Id="b0ec004f-8b7e-4ff5-9b76-e9da6c0209df" />
+        <classShapeMoniker Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" />
+        <classShapeMoniker Id="2085dc03-1b11-4731-ba00-7df4ceec9654" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.2812525 : 13.5689925130208); (2.2812525 : 18.3056977766927); (5.21354541666667 : 18.3056977766927 : JumpStart); (5.38021208333333 : 18.3056977766927 : JumpEnd); (6.25 : 18.3056977766927)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.2812525 : 18.625); (2.2812525 : 13.067726702474); (4.15104041666667 : 13.067726702474 : JumpStart); (4.31770708333333 : 13.067726702474 : JumpEnd); (4.41666666666667 : 13.067726702474 : JumpStart); (4.58333333333333 : 13.067726702474 : JumpEnd); (4.94791916666667 : 13.067726702474 : JumpStart); (5.11458583333333 : 13.067726702474 : JumpEnd); (9.25 : 13.067726702474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblLengthCost" />
       <nodes>
-        <classShapeMoniker Id="267cb27b-527e-4b28-af86-367b53b58967" />
-        <classShapeMoniker Id="16db71a6-9ed3-494c-a981-57fd2fa541b7" />
+        <classShapeMoniker Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" />
+        <classShapeMoniker Id="4ff92930-2c48-4cbd-9fba-5dedd4c8be7e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.9719962565104); (3.5 : 12.9719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 19.2219962565104); (3.5 : 19.2219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblMaterial" />
       <nodes>
-        <classShapeMoniker Id="267cb27b-527e-4b28-af86-367b53b58967" />
-        <classShapeMoniker Id="94dbfb6d-a754-444e-b497-8db1fe110e46" />
+        <classShapeMoniker Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" />
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.70312175 : 18.375); (3.70312175 : 18); (3.88541416666667 : 18 : JumpStart); (4.05208083333333 : 18 : JumpEnd); (4.15104041666667 : 18 : JumpStart); (4.31770708333333 : 18 : JumpEnd); (4.41666666666667 : 18 : JumpStart); (4.58333333333333 : 18 : JumpEnd); (4.68229291666667 : 18 : JumpStart); (4.84895958333333 : 18 : JumpEnd); (4.94791916666667 : 18 : JumpStart); (5.11458583333333 : 18 : JumpEnd); (5.21354541666667 : 18 : JumpStart); (5.38021208333333 : 18 : JumpEnd); (8.875 : 18); (8.875 : 19.1065991210938); (9.25 : 19.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterial/tblMaterial_tblVolumeCost" />
+      <nodes>
+        <classShapeMoniker Id="b81d902c-d109-42ef-918f-f13904a58e92" />
+        <classShapeMoniker Id="7711cbc0-b8b7-4608-b140-cc2629171893" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 18.625); (1.2187475 : 18.15625); (1.66666666666667 : 18.15625 : JumpStart); (1.83333333333333 : 18.15625 : JumpEnd); (2.19791916666667 : 18.15625 : JumpStart); (2.36458583333333 : 18.15625 : JumpEnd); (3.61978841666667 : 18.15625 : JumpStart); (3.78645508333333 : 18.15625 : JumpEnd); (3.88541416666667 : 18.15625 : JumpStart); (4.05208083333333 : 18.15625 : JumpEnd); (4.15104041666667 : 18.15625 : JumpStart); (4.31770708333333 : 18.15625 : JumpEnd); (4.41666666666667 : 18.15625 : JumpStart); (4.58333333333333 : 18.15625 : JumpEnd); (4.68229291666667 : 18.15625 : JumpStart); (4.84895958333333 : 18.15625 : JumpEnd); (4.94791916666667 : 18.15625 : JumpStart); (5.11458583333333 : 18.15625 : JumpEnd); (5.21354541666667 : 18.15625 : JumpStart); (5.38021208333333 : 18.15625 : JumpEnd); (8.79166666666667 : 18.15625 : JumpStart); (8.95833333333333 : 18.15625 : JumpEnd); (9.25 : 18.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqtoNewAgeDataContext/tblMaterialType/tblMaterialType_tblVolumeCost" />
+      <nodes>
+        <classShapeMoniker Id="0ee9f14a-0f94-46d4-9bec-14c99ab63ab1" />
+        <classShapeMoniker Id="7711cbc0-b8b7-4608-b140-cc2629171893" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
