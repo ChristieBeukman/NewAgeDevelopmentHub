@@ -1,0 +1,11 @@
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\bin\Debug\Test.exe.config
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\bin\Debug\Test.exe
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\bin\Debug\Test.pdb
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\bin\Debug\Engines.dll
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\bin\Debug\Engines.pdb
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.Form1.resources
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.Properties.Resources.resources
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.exe
+D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Test\obj\Debug\Test.pdb
