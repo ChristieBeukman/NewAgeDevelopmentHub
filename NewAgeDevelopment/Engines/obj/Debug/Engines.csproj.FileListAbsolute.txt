@@ -22,3 +22,9 @@ D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\bin\Debug\
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.csprojResolveAssemblyReference.cache
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.dll
 D:\GIT Central\Branch\smartydevelopmentrepo\NewAgeDevelopment\Engines\obj\Debug\Engines.pdb
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.dll.config
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.dll
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\bin\Debug\Engines.pdb
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.csprojResolveAssemblyReference.cache
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.dll
+D:\GIT Central\Branch\Hub Branvh\NewAgeDevelopmentHub\NewAgeDevelopment\Engines\obj\Debug\Engines.pdb

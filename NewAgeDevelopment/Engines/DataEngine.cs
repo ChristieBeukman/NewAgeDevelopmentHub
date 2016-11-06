@@ -486,6 +486,34 @@ namespace Engines
             }
         }
 
+        public void SaveAtlanticLength(int AtLenID, Accessor.AtlanticCanvasLenght m)
+        {
+            using (LinqtoNewAgeDataContext dc = new LinqtoNewAgeDataContext())
+            {
+                var matched = (from l in dc.tblAtlanticCanvasLengths
+                               where l.AtlanticCanvasLenID== AtLenID
+                               select l).SingleOrDefault();
+                try
+                {
+                    matched.FrameLenght = m.FrameLenght;
+                    matched.FrameWidth = m.FrameWidth;
+                    matched.NoOfFrames = m.NoOfFrames;
+                    matched.TotalUsedFrameCost = m.TotalUsedFrameCost;
+                    matched.FrameArea = m.TotalArea;
+                    matched.CanvasOverlap = m.CanvasOverlap;
+                    matched.TotalCanvasArea = m.TotalCanvasArea;
+                    matched.TotalFrameLength = m.TotalFrameLength;
+
+                    dc.SubmitChanges();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
         #endregion Insert
 
         //TODO Create Delete Method

@@ -16,6 +16,7 @@ namespace UserControls
         #region Properties
 
         string materialID;
+        int atlanticID;
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
 
@@ -315,7 +316,28 @@ namespace UserControls
             string frameTotalArea = string.Format("{0:0.00}", o.TotalFrameLength);
             lblTotalFrameArea.Text = o.TotalFrameLength.ToString();
 
+            atlanticID = o.AtlanticCanvasLenID;
 
+        }
+
+
+        /// <summary>
+        /// Updates the db
+        /// </summary>
+        private void ApplyEdit()
+        {
+            l = new Accessor.AtlanticCanvasLenght();
+
+            l.FrameLenght = Convert.ToDecimal(lblFrameLength.Text);
+            l.FrameWidth = Convert.ToDecimal(lblFrameWidth.Text);
+            l.NoOfFrames = Convert.ToDecimal(lblNoFrames.Text);
+            l.TotalUsedFrameCost = decimal.Parse(lblTotalUsedFrameCost.Text, System.Globalization.NumberStyles.Currency);
+            l.TotalArea = Convert.ToDecimal(lblFrameArea.Text);
+            l.CanvasOverlap =  Convert.ToDecimal(lblCanvasOveralap.Text);
+            l.TotalCanvasArea =  Convert.ToDecimal(lblTotalCanvasArea.Text);
+            l.TotalFrameLength =  Convert.ToDecimal(lblTotalFrameArea.Text);
+
+            d.SaveAtlanticLength(atlanticID, l);
         }
 
         #endregion Methods
@@ -712,7 +734,18 @@ namespace UserControls
 
         private void btnApply_Click(Object sender, EventArgs e)
         {
-
+            switch (MessageBox.Show("Save to Database?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    ApplyEdit();
+                    MessageBox.Show("Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //SetDisplay(false);
+                    break;
+                case DialogResult.No:
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnCancel_Click(Object sender, EventArgs e)
