@@ -83,70 +83,6 @@ namespace UserControls
             }
         }
 
-        public TextBox TotalUsedFrameCostText
-        {
-            get
-            {
-                return totalUsedFrameCostText;
-            }
-
-            set
-            {
-                totalUsedFrameCostText = value;
-            }
-        }
-
-        public TextBox FrameAreaText
-        {
-            get
-            {
-                return frameAreaText;
-            }
-
-            set
-            {
-                frameAreaText = value;
-            }
-        }
-
-        public TextBox CanvasOveralapText
-        {
-            get
-            {
-                return canvasOveralapText;
-            }
-
-            set
-            {
-                canvasOveralapText = value;
-            }
-        }
-
-        public TextBox TotalCanvasAreaText
-        {
-            get
-            {
-                return totalCanvasAreaText;
-            }
-
-            set
-            {
-                totalCanvasAreaText = value;
-            }
-        }
-
-        public TextBox TotalFrameAreaText
-        {
-            get
-            {
-                return totalFrameAreaText;
-            }
-
-            set
-            {
-                totalFrameAreaText = value;
-            }
-        }
 
         #endregion  Label and Text Properties
 
@@ -187,42 +123,6 @@ namespace UserControls
             noFramesText.Leave += new System.EventHandler(noFramesText_Leave);
             noFramesText.Hide();
 
-
-            totalUsedFrameCostText = new TextBox();
-            totalUsedFrameCostText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            totalUsedFrameCostText.KeyDown += new KeyEventHandler(totalUsedFrameCostText_Keydown);
-            totalUsedFrameCostText.KeyPress += new KeyPressEventHandler(totalUsedFrameCostText_KeyPress);
-            totalUsedFrameCostText.Leave += new System.EventHandler(totalUsedFrameCostText_Leave);
-            totalUsedFrameCostText.Hide();
-
-            frameAreaText = new TextBox();
-            frameAreaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            frameAreaText.KeyDown += new KeyEventHandler(frameAreaText_Keydown);
-            frameAreaText.KeyPress += new KeyPressEventHandler(frameAreaText_KeyPress);
-            frameAreaText.Leave += new System.EventHandler(frameAreaText_Leave);
-            frameAreaText.Hide();
-
-            canvasOveralapText = new TextBox();
-            canvasOveralapText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            canvasOveralapText.KeyDown += new KeyEventHandler(canvasOveralapText_Keydown);
-            canvasOveralapText.KeyPress += new KeyPressEventHandler(canvasOveralapText_KeyPress);
-            canvasOveralapText.Leave += new System.EventHandler(canvasOveralapText_Leave);
-            canvasOveralapText.Hide();
-
-            totalCanvasAreaText = new TextBox();
-            totalCanvasAreaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            totalCanvasAreaText.KeyDown += new KeyEventHandler(totalCanvasAreaText_Keydown);
-            totalCanvasAreaText.KeyPress += new KeyPressEventHandler(totalCanvasAreaText_KeyPress);
-            totalCanvasAreaText.Leave += new System.EventHandler(totalCanvasAreaText_Leave);
-            totalCanvasAreaText.Hide();
-
-            totalFrameAreaText = new TextBox();
-            totalFrameAreaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            totalFrameAreaText.KeyDown += new KeyEventHandler(totalFrameAreaText_Keydown);
-            totalFrameAreaText.KeyPress += new KeyPressEventHandler(totalFrameAreaText_KeyPress);
-            totalFrameAreaText.Leave += new System.EventHandler(totalFrameAreaText_Leave);
-            totalFrameAreaText.Hide();
-
         }
 
         #endregion Constructor
@@ -235,21 +135,10 @@ namespace UserControls
             frameLengthText.Hide();
             frameWidthText.Hide();
             noFramesText.Hide();
-            totalUsedFrameCostText.Hide();
-            FrameAreaText.Hide();
-            canvasOveralapText.Hide();
-            TotalCanvasAreaText.Hide();
-            TotalFrameAreaText.Hide();
-
+           
             lblFrameLength.Show();
             lblFrameWidth.Show();
             lblNoFrames.Show();
-            lblTotalUsedFrameCost.Show();
-            lblFrameArea.Show();
-            lblCanvasOveralap.Show();
-            lblTotalCanvasArea.Show();
-            lblTotalFrameArea.Show();
-
 
         }
 
@@ -286,9 +175,12 @@ namespace UserControls
 
             tblAtlanticCanvasLength o = DataEngine.GetAtlanticLength(frameTyepID, materialID);
             tblMaterial mat = DataEngine.GetMaterial(materialID);
+            tblLengthCost length= DataEngine.GetLengthPricePerMeter(materialID);
             //Top Frame
             lblFrame.Text = mat.Name;
             lblMaterialID.Text = materialID;
+            string pricePerMeter = string.Format("{0:C}", length.PricePerMeter);
+            lblPricePerMeter.Text = pricePerMeter;
 
             // Details
 
@@ -379,67 +271,16 @@ namespace UserControls
         {
             if (e.KeyCode == Keys.Enter)
             {
+                decimal formating;
+                formating = decimal.Parse(noFramesText.Text);
+                noFramesText.Text = string.Format("{0:0.00}", formating);
+
                 lblNoFrames.Text = noFramesText.Text;
                 noFramesText.Hide();
                 lblNoFrames.Show();
             }
         }
 
-        private void totalUsedFrameCostText_Keydown(object sender, KeyEventArgs e)
-        {
-           
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                decimal formating;
-                formating = decimal.Parse(totalUsedFrameCostText.Text, System.Globalization.NumberStyles.Currency);
-                totalUsedFrameCostText.Text = string.Format("{0:C}", formating);
-
-                lblTotalUsedFrameCost.Text = totalUsedFrameCostText.Text;
-                totalUsedFrameCostText.Hide();
-                lblTotalUsedFrameCost.Show();
-            }
-        }
-
-        private void frameAreaText_Keydown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblTotalUsedFrameCost.Text = totalUsedFrameCostText.Text;
-                totalUsedFrameCostText.Hide();
-                lblTotalUsedFrameCost.Show();
-            }
-        }
-
-        private void canvasOveralapText_Keydown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblCanvasOveralap.Text = canvasOveralapText.Text;
-                canvasOveralapText.Hide();
-                lblCanvasOveralap.Show();
-            }
-        }
-
-        private void totalCanvasAreaText_Keydown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblTotalUsedFrameCost.Text = totalCanvasAreaText.Text;
-                totalUsedFrameCostText.Hide();
-                lblTotalUsedFrameCost.Show();
-            }
-        }
-
-        private void totalFrameAreaText_Keydown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblTotalFrameArea.Text = totalFrameAreaText.Text;
-                totalFrameAreaText.Hide();
-                lblTotalFrameArea.Show();
-            }
-        }
 
         #endregion Keydown
 
@@ -493,85 +334,6 @@ namespace UserControls
             }
         }
 
-        private void totalUsedFrameCostText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (ch == 46 && totalUsedFrameCostText.Text.IndexOf('.') != -1)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void frameAreaText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (ch == 46 && frameAreaText.Text.IndexOf('.') != -1)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void canvasOveralapText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (ch == 46 && canvasOveralapText.Text.IndexOf('.') != -1)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void totalCanvasAreaText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (ch == 46 && totalCanvasAreaText.Text.IndexOf('.') != -1)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void totalFrameAreaText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (ch == 46 && totalFrameAreaText.Text.IndexOf('.') != -1)
-            {
-                e.Handled = true;
-                return;
-            }
-
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
 
         #endregion KeyPress
 
@@ -596,30 +358,6 @@ namespace UserControls
 
         }
 
-        private void totalUsedFrameCostText_Leave(Object sender, EventArgs e)
-        {
-
-        }
-
-        private void frameAreaText_Leave(Object sender, EventArgs e)
-        {
-
-        }
-
-        private void canvasOveralapText_Leave(Object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalCanvasAreaText_Leave(Object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalFrameAreaText_Leave(Object sender, EventArgs e)
-        {
-
-        }
 
         #endregion Leave
 
@@ -627,7 +365,7 @@ namespace UserControls
 
         private void lblFrameLength_DoubleClick(Object sender, EventArgs e)
         {
-            HideTextBoxes();
+
 
             this.groupBox2.Controls.Add(FrameLengthText);
 
@@ -641,7 +379,7 @@ namespace UserControls
 
         private void lblFrameWidth_DoubleClick(Object sender, EventArgs e)
         {
-            HideTextBoxes();
+
 
             this.groupBox2.Controls.Add(FrameWidthText);
 
@@ -655,7 +393,6 @@ namespace UserControls
 
         private void lblNoFrames_DoubleClick(Object sender, EventArgs e)
         {
-            HideTextBoxes();
             this.groupBox2.Controls.Add(NoFramesText);
 
             NoFramesText.Size = lblNoFrames.Size;
@@ -666,70 +403,6 @@ namespace UserControls
             NoFramesText.Focus();
         }
 
-        private void lblTotalUsedFrameCost_DoubleClick(Object sender, EventArgs e)
-        {
-            HideTextBoxes();
-            this.groupBox2.Controls.Add(TotalUsedFrameCostText);
-
-            TotalUsedFrameCostText.Size = lblTotalUsedFrameCost.Size;
-            TotalUsedFrameCostText.Location = lblTotalUsedFrameCost.Location;
-            TotalUsedFrameCostText.Text = lblTotalUsedFrameCost.Text;
-            lblTotalUsedFrameCost.Hide();
-            TotalUsedFrameCostText.Show();
-            TotalUsedFrameCostText.Focus();
-        }
-
-        private void lblFrameArea_DoubleClick(Object sender, EventArgs e)
-        {
-            HideTextBoxes();
-            this.groupBox2.Controls.Add(FrameAreaText);
-
-            FrameAreaText.Size = lblFrameArea.Size;
-            FrameAreaText.Location = lblFrameArea.Location;
-            FrameAreaText.Text = lblFrameArea.Text;
-            lblFrameArea.Hide();
-            FrameAreaText.Show();
-            FrameAreaText.Focus();
-        }
-
-        private void lblCanvasOveralap_DoubleClick(Object sender, EventArgs e)
-        {
-            HideTextBoxes();
-            this.groupBox2.Controls.Add(CanvasOveralapText);
-
-            CanvasOveralapText.Size = lblCanvasOveralap.Size;
-            CanvasOveralapText.Location = lblCanvasOveralap.Location;
-            CanvasOveralapText.Text = lblCanvasOveralap.Text;
-            lblCanvasOveralap.Hide();
-            CanvasOveralapText.Show();
-            CanvasOveralapText.Focus();
-        }
-
-        private void lblTotalCanvasArea_DoubleClick(Object sender, EventArgs e)
-        {
-            HideTextBoxes();
-            this.groupBox2.Controls.Add(TotalCanvasAreaText);
-
-            TotalCanvasAreaText.Size = lblTotalCanvasArea.Size;
-            TotalCanvasAreaText.Location = lblTotalCanvasArea.Location;
-            TotalCanvasAreaText.Text = lblTotalCanvasArea.Text;
-            lblTotalCanvasArea.Hide();
-            TotalCanvasAreaText.Show();
-            TotalCanvasAreaText.Focus();
-        }
-
-        private void lblTotalFrameArea_DoubleClick(Object sender, EventArgs e)
-        {
-            HideTextBoxes();
-            this.groupBox2.Controls.Add(TotalFrameAreaText);
-
-            TotalFrameAreaText.Size = lblTotalFrameArea.Size;
-            TotalFrameAreaText.Location = lblTotalFrameArea.Location;
-            TotalFrameAreaText.Text = lblTotalFrameArea.Text;
-            lblTotalFrameArea.Hide();
-            TotalFrameAreaText.Show();
-            TotalFrameAreaText.Focus();
-        }
         #endregion Double Click
 
         private void btnApply_Click(Object sender, EventArgs e)

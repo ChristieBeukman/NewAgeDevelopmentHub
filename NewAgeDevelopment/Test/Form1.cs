@@ -21,7 +21,7 @@ namespace Test
         public Form1()
         {
             InitializeComponent();
-            genericAtlanticCostingControl2.FrameType = GenericAtlanticCostingControl.myFrameType.Atwo;
+            genericAtlanticCostingControl2.FrameType = GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
             genericAtlanticCostingControl1.MaterialID = "";
             comboBox1.DataSource = atl;
 

@@ -108,6 +108,15 @@ namespace Engines
             }
         }
 
+        public static tblLengthCost GetLengthPricePerMeter(String materialID)
+        {
+            using (LinqtoNewAgeDataContext dc = new LinqtoNewAgeDataContext())
+            {
+                return (from ord in dc.GetTable<tblLengthCost>()
+                        where ord.MaterialID == materialID
+                        select ord).SingleOrDefault<tblLengthCost>();
+            }
+        }
         /// <summary>
         /// Sekects the AreaCost by MaterialID
         /// </summary>
