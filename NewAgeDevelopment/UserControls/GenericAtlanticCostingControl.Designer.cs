@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblNoFrames = new System.Windows.Forms.Label();
@@ -61,15 +60,6 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(240, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 275);
-            this.panel1.TabIndex = 13;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.groupBox2);
@@ -86,7 +76,7 @@
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox4.Location = new System.Drawing.Point(13, 70);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(202, 265);
+            this.groupBox4.Size = new System.Drawing.Size(207, 265);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             // 
@@ -181,7 +171,7 @@
             this.lblTotalFrameArea.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTotalFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTotalFrameArea.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalFrameArea.Location = new System.Drawing.Point(126, 235);
+            this.lblTotalFrameArea.Location = new System.Drawing.Point(130, 235);
             this.lblTotalFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
             this.lblTotalFrameArea.Name = "lblTotalFrameArea";
             this.lblTotalFrameArea.Size = new System.Drawing.Size(70, 20);
@@ -195,7 +185,7 @@
             this.lblTotalCanvasArea.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTotalCanvasArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTotalCanvasArea.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalCanvasArea.Location = new System.Drawing.Point(126, 208);
+            this.lblTotalCanvasArea.Location = new System.Drawing.Point(130, 208);
             this.lblTotalCanvasArea.MinimumSize = new System.Drawing.Size(70, 20);
             this.lblTotalCanvasArea.Name = "lblTotalCanvasArea";
             this.lblTotalCanvasArea.Size = new System.Drawing.Size(70, 20);
@@ -209,7 +199,7 @@
             this.lblCanvasOveralap.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCanvasOveralap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblCanvasOveralap.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCanvasOveralap.Location = new System.Drawing.Point(125, 182);
+            this.lblCanvasOveralap.Location = new System.Drawing.Point(129, 182);
             this.lblCanvasOveralap.MinimumSize = new System.Drawing.Size(70, 20);
             this.lblCanvasOveralap.Name = "lblCanvasOveralap";
             this.lblCanvasOveralap.Size = new System.Drawing.Size(70, 20);
@@ -223,7 +213,7 @@
             this.lblFrameArea.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblFrameArea.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblFrameArea.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFrameArea.Location = new System.Drawing.Point(125, 157);
+            this.lblFrameArea.Location = new System.Drawing.Point(129, 157);
             this.lblFrameArea.MinimumSize = new System.Drawing.Size(70, 20);
             this.lblFrameArea.Name = "lblFrameArea";
             this.lblFrameArea.Size = new System.Drawing.Size(70, 20);
@@ -237,7 +227,7 @@
             this.lblTotalUsedFrameCost.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTotalUsedFrameCost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTotalUsedFrameCost.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalUsedFrameCost.Location = new System.Drawing.Point(125, 130);
+            this.lblTotalUsedFrameCost.Location = new System.Drawing.Point(129, 130);
             this.lblTotalUsedFrameCost.MinimumSize = new System.Drawing.Size(70, 20);
             this.lblTotalUsedFrameCost.Name = "lblTotalUsedFrameCost";
             this.lblTotalUsedFrameCost.Size = new System.Drawing.Size(70, 20);
@@ -256,29 +246,29 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 212);
+            this.label11.Location = new System.Drawing.Point(-1, 212);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 13);
+            this.label11.Size = new System.Drawing.Size(124, 13);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Total Canvas Area";
+            this.label11.Text = "Total Canvas Area Sq/m";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(40, 186);
+            this.label10.Location = new System.Drawing.Point(11, 186);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.Size = new System.Drawing.Size(112, 13);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Canvas Overlap";
+            this.label10.Text = "Canvas Overlap Sq/m";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(62, 161);
+            this.label9.Location = new System.Drawing.Point(33, 161);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.Size = new System.Drawing.Size(90, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Frame Area";
+            this.label9.Text = "Frame Area Sq/m";
             // 
             // label8
             // 
@@ -404,7 +394,6 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Name = "GenericAtlanticCostingControl";
@@ -420,8 +409,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;

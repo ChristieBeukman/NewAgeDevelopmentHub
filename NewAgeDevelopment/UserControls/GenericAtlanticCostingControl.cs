@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Engines;
+using System.Configuration;
 
 namespace UserControls
 {
@@ -212,7 +213,6 @@ namespace UserControls
 
         }
 
-
         /// <summary>
         /// Updates the db
         /// </summary>
@@ -232,6 +232,43 @@ namespace UserControls
             d.SaveAtlanticLength(atlanticID, l);
         }
 
+        private void CalculateCosting()
+        {
+            decimal pricePerM = decimal.Parse(lblPricePerMeter.Text, System.Globalization.NumberStyles.Currency);
+            decimal length = decimal.Parse(lblFrameLength.Text);
+            decimal width = decimal.Parse(lblFrameWidth.Text);
+            decimal noFrames = decimal.Parse(lblNoFrames.Text);
+
+            if (pricePerM != 0 && length != 0 && width != 0 && noFrames != 0)
+            {
+                // Total Used Frame Cost
+                decimal totalFrameCost = pricePerM * noFrames * ((width * 2) + (length * 2));
+                lblTotalUsedFrameCost.Text = string.Format("{0:C}", totalFrameCost);
+
+                //Frame Area 
+                decimal frameArea = length * width * noFrames;
+                lblFrameArea.Text = string.Format("{0:0.00}", frameArea);
+
+                //Canvas Overlap
+                decimal SavedCanvase = Convert.ToDecimal(0.14);
+                decimal canvasOverlap = ((SavedCanvase * length) + (SavedCanvase * width)) * noFrames;
+                lblCanvasOveralap.Text = string.Format("{0:0.00}", canvasOverlap);
+
+                //Total Canvas Area
+                decimal totalCanvasArea = frameArea + canvasOverlap;
+                lblTotalCanvasArea.Text = string.Format("{0:0.00}", totalCanvasArea);
+
+                decimal totalFrameArea = ((length * 2) + (width * 2)) * noFrames;
+                lblTotalFrameArea.Text = string.Format("{0:0.00}", totalFrameArea);
+            }
+            else
+            {
+                lblTotalUsedFrameCost.ForeColor = System.Drawing.Color.Red;
+                lblTotalUsedFrameCost.Text = "INVALID";
+            }
+
+
+        }
         #endregion Methods
 
         #region Events
@@ -344,6 +381,9 @@ namespace UserControls
             decimal formating;
             formating = decimal.Parse(frameLengthText.Text);
             lblFrameLength.Text = string.Format("{0:0.00}", formating);
+
+            CalculateCosting();
+
         }
 
         private void frameWidthText_Leave(Object sender, EventArgs e)
@@ -351,11 +391,13 @@ namespace UserControls
             decimal formating;
             formating = decimal.Parse(frameWidthText.Text);
             lblFrameWidth.Text = string.Format("{0:0.00}", formating);
+
+            CalculateCosting();
         }
 
         private void noFramesText_Leave(Object sender, EventArgs e)
         {
-
+            CalculateCosting();
         }
 
 
@@ -424,6 +466,36 @@ namespace UserControls
         private void btnCancel_Click(Object sender, EventArgs e)
         {
 
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            switch (frameType)
+            {
+                case myFrameType.SquareTwoFifty:
+                    using (SolidBrush White = new SolidBrush( System.Drawing.Color.White))
+                    {
+                        e.Graphics.FillRectangle(White, new Rectangle(240, 83, 275, 275));
+                    }
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        e.Graphics.DrawRectangle(BlackPen, 270, 115, 150, 150);
+                    }
+
+            break;
+                case myFrameType.Atwo:
+                    break;
+                case myFrameType.SquareFourFifty:
+                    break;
+                case myFrameType.FourFifty:
+                    break;
+                case myFrameType.FiveFifty:
+                    break;
+                case myFrameType.Pane:
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion Events
 

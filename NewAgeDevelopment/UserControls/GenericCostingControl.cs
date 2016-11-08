@@ -600,7 +600,7 @@ namespace UserControls
         }
 
         void txtMiddlePanelText_KeyPress(Object sender, KeyPressEventArgs e)
-        {
+            {
             char ch = e.KeyChar;
 
             if (ch == 46 && txtMiddlePanelText.Text.IndexOf('.') != -1)

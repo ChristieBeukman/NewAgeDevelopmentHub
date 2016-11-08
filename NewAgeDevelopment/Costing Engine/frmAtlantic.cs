@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Engines;
+using System.Configuration;
 
 namespace Costing_Engine
 {
     public partial class frmAtlantic : Form
     {
+        #region Config
+
+
+        #endregion Config
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
         List<Accessor.AtlanticCanvasLenght> atl = DataEngine.GetAtlanticLength(1);
