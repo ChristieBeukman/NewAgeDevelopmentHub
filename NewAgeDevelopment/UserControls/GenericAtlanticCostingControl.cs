@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Engines;
 using System.Configuration;
+using System.Drawing.Drawing2D;
+
 
 namespace UserControls
 {
@@ -20,10 +22,11 @@ namespace UserControls
         int atlanticID;
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
+        private Font TextFont = new Font("Ariel", 7);
 
         #region Label and Text Properties
         //TODO DELETE BELOW
-            private TextBox frameLengthText;
+        private TextBox frameLengthText;
             private TextBox frameWidthText;
             private TextBox noFramesText;
             private TextBox totalUsedFrameCostText;
@@ -267,7 +270,7 @@ namespace UserControls
                 lblTotalUsedFrameCost.Text = "INVALID";
             }
 
-
+            Invalidate();
         }
         #endregion Methods
 
@@ -470,19 +473,62 @@ namespace UserControls
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            using (SolidBrush White = new SolidBrush(System.Drawing.Color.White))
+            {
+                e.Graphics.FillRectangle(White, new Rectangle(240, 83, 275, 275));
+            }
             switch (frameType)
             {
                 case myFrameType.SquareTwoFifty:
-                    using (SolidBrush White = new SolidBrush( System.Drawing.Color.White))
-                    {
-                        e.Graphics.FillRectangle(White, new Rectangle(240, 83, 275, 275));
-                    }
+                   
                     using (Pen BlackPen = new Pen(Color.Black, 1))
                     {
-                        e.Graphics.DrawRectangle(BlackPen, 270, 115, 150, 150);
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 150, 150);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 130, 130);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 450, 145, 440, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 295, 310, 285);
+                        e.Graphics.DrawLine(BlackPen, 450, 295, 440, 285);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 295);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 450, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 295, 275, 280);
+                        e.Graphics.DrawLine(BlackPen, 280, 295, 285, 280);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 450, 125, 435, 130);
+                        e.Graphics.DrawLine(BlackPen, 450, 125, 435, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 450, 145, 450, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 295, 280, 295);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 250, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
                     }
 
-            break;
+
+                    break;
                 case myFrameType.Atwo:
                     break;
                 case myFrameType.SquareFourFifty:
@@ -497,6 +543,26 @@ namespace UserControls
                     break;
             }
         }
+        private void DrawRotatedTextAt(Graphics gr, float angle, string txt, int x, int y, Font the_font, Brush the_brush)
+        {
+            // Save the graphics state.
+            GraphicsState state = gr.Save();
+            gr.ResetTransform();
+
+            // Rotate.
+            gr.RotateTransform(angle);
+
+            // Translate to desired position. Be sure to append
+            // the rotation so it occurs after the rotation.
+            gr.TranslateTransform(x, y, MatrixOrder.Append);
+
+            // Draw the text at the origin.
+            gr.DrawString(txt, the_font, the_brush, 0, 0);
+
+            // Restore the graphics state.
+            gr.Restore(state);
+        }
+
         #endregion Events
 
 
