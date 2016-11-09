@@ -32,41 +32,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupLength = new System.Windows.Forms.GroupBox();
             this.tabAtlanticCosting = new System.Windows.Forms.TabControl();
+            this.tabPageSquareTwoFifty = new System.Windows.Forms.TabPage();
+            this.costingSquareTwoFifty = new UserControls.GenericAtlanticCostingControl();
+            this.tabPageATwo = new System.Windows.Forms.TabPage();
+            this.costingSquareAtwo = new UserControls.GenericAtlanticCostingControl();
             this.tabPageSquareFourFifty = new System.Windows.Forms.TabPage();
             this.tabPageThreeFifty = new System.Windows.Forms.TabPage();
             this.tabPageFourFifty = new System.Windows.Forms.TabPage();
             this.tabPagePane = new System.Windows.Forms.TabPage();
             this.tabPageSummary = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.maskedEditableLabelControl8 = new UserControls.MaskedEditableLabelControl();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.maskedEditableLabelControl7 = new UserControls.MaskedEditableLabelControl();
-            this.maskedEditableLabelControl6 = new UserControls.MaskedEditableLabelControl();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.maskedEditableLabelControl5 = new UserControls.MaskedEditableLabelControl();
-            this.maskedEditableLabelControl4 = new UserControls.MaskedEditableLabelControl();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblATwoFrameWidth = new UserControls.MaskedEditableLabelControl();
-            this.maskedEditableLabelControl2 = new UserControls.MaskedEditableLabelControl();
-            this.lblATwoFrameLength = new UserControls.MaskedEditableLabelControl();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tabPageATwo = new System.Windows.Forms.TabPage();
-            this.tabPageSquareTwoFifty = new System.Windows.Forms.TabPage();
+            this.costingSquareFourFifty = new UserControls.GenericAtlanticCostingControl();
+            this.costingFourFifty = new UserControls.GenericAtlanticCostingControl();
+            this.costingFiveFifty = new UserControls.GenericAtlanticCostingControl();
+            this.costingPane = new UserControls.GenericAtlanticCostingControl();
             this.groupLength.SuspendLayout();
             this.tabAtlanticCosting.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.tabPageSquareTwoFifty.SuspendLayout();
             this.tabPageATwo.SuspendLayout();
+            this.tabPageSquareFourFifty.SuspendLayout();
+            this.tabPageThreeFifty.SuspendLayout();
+            this.tabPageFourFifty.SuspendLayout();
+            this.tabPagePane.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbLengthMaterial
@@ -119,8 +105,53 @@
             this.tabAtlanticCosting.TabIndex = 6;
             this.tabAtlanticCosting.Visible = false;
             // 
+            // tabPageSquareTwoFifty
+            // 
+            this.tabPageSquareTwoFifty.BackColor = System.Drawing.SystemColors.GrayText;
+            this.tabPageSquareTwoFifty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPageSquareTwoFifty.Controls.Add(this.costingSquareTwoFifty);
+            this.tabPageSquareTwoFifty.Location = new System.Drawing.Point(4, 25);
+            this.tabPageSquareTwoFifty.Name = "tabPageSquareTwoFifty";
+            this.tabPageSquareTwoFifty.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSquareTwoFifty.Size = new System.Drawing.Size(576, 382);
+            this.tabPageSquareTwoFifty.TabIndex = 0;
+            this.tabPageSquareTwoFifty.Text = "Square 250 X 250";
+            // 
+            // costingSquareTwoFifty
+            // 
+            this.costingSquareTwoFifty.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingSquareTwoFifty.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.costingSquareTwoFifty.Location = new System.Drawing.Point(0, 0);
+            this.costingSquareTwoFifty.MaterialID = null;
+            this.costingSquareTwoFifty.Name = "costingSquareTwoFifty";
+            this.costingSquareTwoFifty.Size = new System.Drawing.Size(550, 392);
+            this.costingSquareTwoFifty.TabIndex = 0;
+            // 
+            // tabPageATwo
+            // 
+            this.tabPageATwo.BackColor = System.Drawing.SystemColors.GrayText;
+            this.tabPageATwo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPageATwo.Controls.Add(this.costingSquareAtwo);
+            this.tabPageATwo.Location = new System.Drawing.Point(4, 25);
+            this.tabPageATwo.Name = "tabPageATwo";
+            this.tabPageATwo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageATwo.Size = new System.Drawing.Size(576, 382);
+            this.tabPageATwo.TabIndex = 1;
+            this.tabPageATwo.Text = "A2";
+            // 
+            // costingSquareAtwo
+            // 
+            this.costingSquareAtwo.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingSquareAtwo.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.Atwo;
+            this.costingSquareAtwo.Location = new System.Drawing.Point(0, 0);
+            this.costingSquareAtwo.MaterialID = null;
+            this.costingSquareAtwo.Name = "costingSquareAtwo";
+            this.costingSquareAtwo.Size = new System.Drawing.Size(550, 392);
+            this.costingSquareAtwo.TabIndex = 0;
+            // 
             // tabPageSquareFourFifty
             // 
+            this.tabPageSquareFourFifty.Controls.Add(this.costingSquareFourFifty);
             this.tabPageSquareFourFifty.Location = new System.Drawing.Point(4, 25);
             this.tabPageSquareFourFifty.Name = "tabPageSquareFourFifty";
             this.tabPageSquareFourFifty.Padding = new System.Windows.Forms.Padding(3);
@@ -131,6 +162,7 @@
             // 
             // tabPageThreeFifty
             // 
+            this.tabPageThreeFifty.Controls.Add(this.costingFourFifty);
             this.tabPageThreeFifty.Location = new System.Drawing.Point(4, 25);
             this.tabPageThreeFifty.Name = "tabPageThreeFifty";
             this.tabPageThreeFifty.Padding = new System.Windows.Forms.Padding(3);
@@ -141,6 +173,7 @@
             // 
             // tabPageFourFifty
             // 
+            this.tabPageFourFifty.Controls.Add(this.costingFiveFifty);
             this.tabPageFourFifty.Location = new System.Drawing.Point(4, 25);
             this.tabPageFourFifty.Name = "tabPageFourFifty";
             this.tabPageFourFifty.Padding = new System.Windows.Forms.Padding(3);
@@ -151,6 +184,7 @@
             // 
             // tabPagePane
             // 
+            this.tabPagePane.Controls.Add(this.costingPane);
             this.tabPagePane.Location = new System.Drawing.Point(4, 25);
             this.tabPagePane.Name = "tabPagePane";
             this.tabPagePane.Padding = new System.Windows.Forms.Padding(3);
@@ -169,263 +203,45 @@
             this.tabPageSummary.Text = "Summary";
             this.tabPageSummary.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // costingSquareFourFifty
             // 
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox4.Location = new System.Drawing.Point(18, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(537, 45);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
+            this.costingSquareFourFifty.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingSquareFourFifty.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.costingSquareFourFifty.Location = new System.Drawing.Point(0, 0);
+            this.costingSquareFourFifty.MaterialID = null;
+            this.costingSquareFourFifty.Name = "costingSquareFourFifty";
+            this.costingSquareFourFifty.Size = new System.Drawing.Size(550, 392);
+            this.costingSquareFourFifty.TabIndex = 0;
             // 
-            // label23
+            // costingFourFifty
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(15, 17);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 13);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "Frame:";
+            this.costingFourFifty.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingFourFifty.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.costingFourFifty.Location = new System.Drawing.Point(0, 0);
+            this.costingFourFifty.MaterialID = null;
+            this.costingFourFifty.Name = "costingFourFifty";
+            this.costingFourFifty.Size = new System.Drawing.Size(550, 392);
+            this.costingFourFifty.TabIndex = 0;
             // 
-            // label22
+            // costingFiveFifty
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Location = new System.Drawing.Point(60, 16);
-            this.label22.MinimumSize = new System.Drawing.Size(90, 20);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 20);
-            this.label22.TabIndex = 6;
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.costingFiveFifty.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingFiveFifty.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.costingFiveFifty.Location = new System.Drawing.Point(0, 0);
+            this.costingFiveFifty.MaterialID = null;
+            this.costingFiveFifty.Name = "costingFiveFifty";
+            this.costingFiveFifty.Size = new System.Drawing.Size(550, 392);
+            this.costingFiveFifty.TabIndex = 0;
             // 
-            // label21
+            // costingPane
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(398, 19);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(61, 13);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Material ID:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Location = new System.Drawing.Point(459, 17);
-            this.label20.MinimumSize = new System.Drawing.Size(70, 20);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 20);
-            this.label20.TabIndex = 8;
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.lblATwoFrameLength);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl2);
-            this.groupBox3.Controls.Add(this.lblATwoFrameWidth);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl4);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl5);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl6);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl7);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.maskedEditableLabelControl8);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox3.Location = new System.Drawing.Point(36, 104);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(202, 230);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            // 
-            // maskedEditableLabelControl8
-            // 
-            this.maskedEditableLabelControl8.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl8.Location = new System.Drawing.Point(127, 123);
-            this.maskedEditableLabelControl8.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl8.Name = "maskedEditableLabelControl8";
-            this.maskedEditableLabelControl8.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl8.TabIndex = 16;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(10, 101);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(115, 13);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "Total Used Frame Cost";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(64, 128);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 13);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Frame Area";
-            // 
-            // maskedEditableLabelControl7
-            // 
-            this.maskedEditableLabelControl7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl7.Location = new System.Drawing.Point(127, 97);
-            this.maskedEditableLabelControl7.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl7.Name = "maskedEditableLabelControl7";
-            this.maskedEditableLabelControl7.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl7.TabIndex = 14;
-            // 
-            // maskedEditableLabelControl6
-            // 
-            this.maskedEditableLabelControl6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl6.Location = new System.Drawing.Point(127, 149);
-            this.maskedEditableLabelControl6.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl6.Name = "maskedEditableLabelControl6";
-            this.maskedEditableLabelControl6.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl6.TabIndex = 18;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(32, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(93, 13);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Number of Frames";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(42, 153);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 13);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "Canvas Overlap";
-            // 
-            // maskedEditableLabelControl5
-            // 
-            this.maskedEditableLabelControl5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl5.Location = new System.Drawing.Point(127, 71);
-            this.maskedEditableLabelControl5.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl5.Name = "maskedEditableLabelControl5";
-            this.maskedEditableLabelControl5.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl5.TabIndex = 12;
-            // 
-            // maskedEditableLabelControl4
-            // 
-            this.maskedEditableLabelControl4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl4.Location = new System.Drawing.Point(127, 175);
-            this.maskedEditableLabelControl4.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl4.Name = "maskedEditableLabelControl4";
-            this.maskedEditableLabelControl4.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl4.TabIndex = 20;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(58, 49);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Frame Width";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 179);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 13);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Total Canvas Area";
-            // 
-            // lblATwoFrameWidth
-            // 
-            this.lblATwoFrameWidth.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblATwoFrameWidth.Location = new System.Drawing.Point(127, 45);
-            this.lblATwoFrameWidth.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblATwoFrameWidth.Name = "lblATwoFrameWidth";
-            this.lblATwoFrameWidth.Size = new System.Drawing.Size(70, 20);
-            this.lblATwoFrameWidth.TabIndex = 10;
-            // 
-            // maskedEditableLabelControl2
-            // 
-            this.maskedEditableLabelControl2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.maskedEditableLabelControl2.Location = new System.Drawing.Point(127, 201);
-            this.maskedEditableLabelControl2.MinimumSize = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl2.Name = "maskedEditableLabelControl2";
-            this.maskedEditableLabelControl2.Size = new System.Drawing.Size(70, 20);
-            this.maskedEditableLabelControl2.TabIndex = 22;
-            // 
-            // lblATwoFrameLength
-            // 
-            this.lblATwoFrameLength.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblATwoFrameLength.Location = new System.Drawing.Point(127, 19);
-            this.lblATwoFrameLength.MinimumSize = new System.Drawing.Size(70, 20);
-            this.lblATwoFrameLength.Name = "lblATwoFrameLength";
-            this.lblATwoFrameLength.Size = new System.Drawing.Size(70, 20);
-            this.lblATwoFrameLength.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 206);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 13);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Total Frame Lenght";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Frame Length";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(270, 85);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 275);
-            this.panel2.TabIndex = 13;
-            // 
-            // tabPageATwo
-            // 
-            this.tabPageATwo.BackColor = System.Drawing.SystemColors.GrayText;
-            this.tabPageATwo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPageATwo.Controls.Add(this.panel2);
-            this.tabPageATwo.Controls.Add(this.groupBox3);
-            this.tabPageATwo.Controls.Add(this.groupBox4);
-            this.tabPageATwo.Location = new System.Drawing.Point(4, 25);
-            this.tabPageATwo.Name = "tabPageATwo";
-            this.tabPageATwo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageATwo.Size = new System.Drawing.Size(576, 382);
-            this.tabPageATwo.TabIndex = 1;
-            this.tabPageATwo.Text = "A2";
-            // 
-            // tabPageSquareTwoFifty
-            // 
-            this.tabPageSquareTwoFifty.BackColor = System.Drawing.SystemColors.GrayText;
-            this.tabPageSquareTwoFifty.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPageSquareTwoFifty.Location = new System.Drawing.Point(4, 25);
-            this.tabPageSquareTwoFifty.Name = "tabPageSquareTwoFifty";
-            this.tabPageSquareTwoFifty.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSquareTwoFifty.Size = new System.Drawing.Size(576, 382);
-            this.tabPageSquareTwoFifty.TabIndex = 0;
-            this.tabPageSquareTwoFifty.Text = "Square 250 X 250";
+            this.costingPane.BackColor = System.Drawing.SystemColors.GrayText;
+            this.costingPane.FrameType = UserControls.GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
+            this.costingPane.Location = new System.Drawing.Point(0, 0);
+            this.costingPane.MaterialID = null;
+            this.costingPane.Name = "costingPane";
+            this.costingPane.Size = new System.Drawing.Size(550, 392);
+            this.costingPane.TabIndex = 0;
             // 
             // frmAtlantic
             // 
@@ -440,11 +256,12 @@
             this.groupLength.ResumeLayout(false);
             this.groupLength.PerformLayout();
             this.tabAtlanticCosting.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.tabPageSquareTwoFifty.ResumeLayout(false);
             this.tabPageATwo.ResumeLayout(false);
+            this.tabPageSquareFourFifty.ResumeLayout(false);
+            this.tabPageThreeFifty.ResumeLayout(false);
+            this.tabPageFourFifty.ResumeLayout(false);
+            this.tabPagePane.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,28 +278,11 @@
         private System.Windows.Forms.TabPage tabPageSummary;
         private System.Windows.Forms.TabPage tabPageSquareTwoFifty;
         private System.Windows.Forms.TabPage tabPageATwo;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label13;
-        private UserControls.MaskedEditableLabelControl lblATwoFrameLength;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl2;
-        private UserControls.MaskedEditableLabelControl lblATwoFrameWidth;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl4;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl6;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl7;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private UserControls.MaskedEditableLabelControl maskedEditableLabelControl8;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private UserControls.GenericAtlanticCostingControl costingSquareTwoFifty;
+        private UserControls.GenericAtlanticCostingControl costingSquareAtwo;
+        private UserControls.GenericAtlanticCostingControl costingSquareFourFifty;
+        private UserControls.GenericAtlanticCostingControl costingFourFifty;
+        private UserControls.GenericAtlanticCostingControl costingFiveFifty;
+        private UserControls.GenericAtlanticCostingControl costingPane;
     }
 }

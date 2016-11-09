@@ -530,6 +530,51 @@ namespace UserControls
 
                     break;
                 case myFrameType.Atwo:
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 170, 100);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 150, 80);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 470, 145, 460, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 245, 310, 235);
+                        e.Graphics.DrawLine(BlackPen, 470, 245, 460, 235);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 245);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 470, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 295, 275, 280);
+                        e.Graphics.DrawLine(BlackPen, 280, 295, 285, 280);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 450, 125, 435, 130);
+                        e.Graphics.DrawLine(BlackPen, 450, 125, 435, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 250, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
+                    }
                     break;
                 case myFrameType.SquareFourFifty:
                     break;

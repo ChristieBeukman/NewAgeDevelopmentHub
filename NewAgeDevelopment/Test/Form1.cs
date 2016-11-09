@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Engines;
+using System.Configuration;
 using UserControls;
 
 namespace Test
@@ -24,6 +25,9 @@ namespace Test
             genericAtlanticCostingControl2.FrameType = GenericAtlanticCostingControl.myFrameType.SquareTwoFifty;
             genericAtlanticCostingControl1.MaterialID = "";
             comboBox1.DataSource = atl;
+            string canvas = ConfigurationManager.AppSettings["CanvasOverlap"];
+            MessageBox.Show(canvas);
+
 
         }
 
