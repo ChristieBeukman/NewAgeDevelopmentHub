@@ -9,14 +9,16 @@ namespace Costing_Engine
 {
     public partial class frmAtlantic : Form
     {
-        #region Config
-
-
-        #endregion Config
+        #region Properties
+        string materialID;
         DataEngine d = new DataEngine();
         Accessor.AtlanticCanvasLenght l;
+
         List<Accessor.AtlanticCanvasLenght> atl = DataEngine.GetAtlanticLength(1);
 
+        #endregion Properties
+
+        #region Constructor
 
         public frmAtlantic()
         {
@@ -30,6 +32,7 @@ namespace Costing_Engine
             costingPane.FrameType = GenericAtlanticCostingControl.myFrameType.Pane;
             costingFiveFifty.FrameType = GenericAtlanticCostingControl.myFrameType.FiveFifty;
 
+            
 
 
             costingSquareTwoFifty.MaterialID = "";
@@ -42,6 +45,10 @@ namespace Costing_Engine
 
             this.Size = new System.Drawing.Size(230, 140);
         }
+
+        #endregion Constructor
+
+        #region Methods
 
         private void SetDisplay()
         {
@@ -58,6 +65,10 @@ namespace Costing_Engine
             tabAtlanticCosting.Show();
         }
 
+        #endregion Methods
+
+        #region Events
+
         private void cmbLengthMaterial_SelectedIndexChanged(Object sender, EventArgs e)
         {
             l = new Accessor.AtlanticCanvasLenght();
@@ -69,6 +80,12 @@ namespace Costing_Engine
         {
             l = new Accessor.AtlanticCanvasLenght();
             l = cmbLengthMaterial.SelectedItem as Accessor.AtlanticCanvasLenght;
+
+            materialID = l.MaterialID;
+            tblMaterial mat = DataEngine.GetMaterial(materialID);
+
+            lblFrame.Text = mat.Name;
+            lblMaterialID.Text = mat.MaterialID;
 
             costingSquareTwoFifty.MaterialID = l.MaterialID;
             costingSquareTwoFifty.SetDisplay();
@@ -95,5 +112,58 @@ namespace Costing_Engine
         {
 
         }
+
+        private void chkPhotoPaper_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkMount_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkHardboard_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkPrinter_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBrown_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkPaster_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkDala_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkStapler_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkVinal_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkScrews_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
+        #endregion Events
+
+
     }
 }

@@ -861,7 +861,7 @@ namespace Engines
 
             public override String ToString()
             {
-                return materialID;
+                return MaterialName;
             }
 
         }
@@ -1080,7 +1080,7 @@ namespace Engines
 
             public override String ToString()
             {
-                return materialID;
+                return MaterialName;
             }
 
         }

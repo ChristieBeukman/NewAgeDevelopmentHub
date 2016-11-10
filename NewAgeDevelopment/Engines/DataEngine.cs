@@ -212,6 +212,7 @@ namespace Engines
                             select new Accessor.AtlanticCanvasLenght
                             {
                                 MaterialID = n.MaterialID,
+                                MaterialName = m.Name,
                                 FrameID = n.FrameID,
                                 FrameLenght = n.FrameLenght,
                                 FrameWidth = n.FrameWidth,
