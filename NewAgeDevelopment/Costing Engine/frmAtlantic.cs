@@ -90,5 +90,10 @@ namespace Costing_Engine
 
             SetDisplay();
         }
+
+        private void chkCanvas_CheckedChanged(Object sender, EventArgs e)
+        {
+
+        }
     }
 }

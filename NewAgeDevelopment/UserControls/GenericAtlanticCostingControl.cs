@@ -87,6 +87,71 @@ namespace UserControls
             }
         }
 
+        public TextBox TotalUsedFrameCostText
+        {
+            get
+            {
+                return totalUsedFrameCostText;
+            }
+
+            set
+            {
+                totalUsedFrameCostText = value;
+            }
+        }
+
+        public TextBox FrameAreaText
+        {
+            get
+            {
+                return frameAreaText;
+            }
+
+            set
+            {
+                frameAreaText = value;
+            }
+        }
+
+        public TextBox CanvasOveralapText
+        {
+            get
+            {
+                return canvasOveralapText;
+            }
+
+            set
+            {
+                canvasOveralapText = value;
+            }
+        }
+
+        public TextBox TotalCanvasAreaText
+        {
+            get
+            {
+                return totalCanvasAreaText;
+            }
+
+            set
+            {
+                totalCanvasAreaText = value;
+            }
+        }
+
+        public TextBox TotalFrameAreaText
+        {
+            get
+            {
+                return totalFrameAreaText;
+            }
+
+            set
+            {
+                totalFrameAreaText = value;
+            }
+        }
+
 
         #endregion  Label and Text Properties
 
@@ -550,6 +615,53 @@ namespace UserControls
                         e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
                         e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
                         //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 275, 235);
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 285, 235);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 130);
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 230, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
+                    }
+                    break;
+                case myFrameType.SquareFourFifty:
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 150, 150);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 130, 130);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 450, 145, 440, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 295, 310, 285);
+                        e.Graphics.DrawLine(BlackPen, 450, 295, 440, 285);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 295);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 450, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
                         e.Graphics.DrawLine(BlackPen, 280, 295, 275, 280);
                         e.Graphics.DrawLine(BlackPen, 280, 295, 285, 280);
                         //Draw Arrow Left
@@ -565,8 +677,8 @@ namespace UserControls
                         e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
                         e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
 
-                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
-                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                        e.Graphics.DrawLine(BluePen, 450, 145, 450, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 295, 280, 295);
                     }
                     using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
                     {
@@ -576,13 +688,147 @@ namespace UserControls
                         e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
                     }
                     break;
-                case myFrameType.SquareFourFifty:
-                    break;
                 case myFrameType.FourFifty:
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 170, 100);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 150, 80);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 470, 145, 460, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 245, 310, 235);
+                        e.Graphics.DrawLine(BlackPen, 470, 245, 460, 235);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 245);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 470, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 275, 235);
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 285, 235);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 130);
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 230, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
+                    }
                     break;
                 case myFrameType.FiveFifty:
+                    
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 170, 100);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 150, 80);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 470, 145, 460, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 245, 310, 235);
+                        e.Graphics.DrawLine(BlackPen, 470, 245, 460, 235);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 245);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 470, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 275, 235);
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 285, 235);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 130);
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 230, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
+                    }
                     break;
                 case myFrameType.Pane:
+                    using (Pen BlackPen = new Pen(Color.Black, 1))
+                    {
+                        //Draw Frame
+                        e.Graphics.DrawRectangle(BlackPen, 300, 145, 170, 100);
+                        e.Graphics.DrawRectangle(BlackPen, 310, 155, 150, 80);
+                        //  draw Frame corners
+                        e.Graphics.DrawLine(BlackPen, 300, 145, 310, 155);
+                        e.Graphics.DrawLine(BlackPen, 470, 145, 460, 155);
+
+                        e.Graphics.DrawLine(BlackPen, 300, 245, 310, 235);
+                        e.Graphics.DrawLine(BlackPen, 470, 245, 460, 235);
+
+                        //Draw Measurelines
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 280, 245);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 470, 125);
+
+                        //Draw Arrow Top
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 275, 160);
+                        e.Graphics.DrawLine(BlackPen, 280, 145, 285, 160);
+                        //Draw Arrow Bottom
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 275, 235);
+                        e.Graphics.DrawLine(BlackPen, 280, 245, 285, 235);
+                        //Draw Arrow Left
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 130);
+                        e.Graphics.DrawLine(BlackPen, 300, 125, 315, 120);
+                        //Draw Arrow Right
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 130);
+                        e.Graphics.DrawLine(BlackPen, 470, 125, 455, 120);
+
+                    }
+                    using (Pen BluePen = new Pen(Color.Blue, 1))
+                    {
+                        e.Graphics.DrawLine(BluePen, 300, 145, 300, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 145, 280, 145);
+
+                        e.Graphics.DrawLine(BluePen, 470, 145, 470, 125);
+                        e.Graphics.DrawLine(BluePen, 300, 245, 280, 245);
+                    }
+                    using (SolidBrush blackBrush = new SolidBrush(Color.Blue))
+                    {
+                        // Length Cost
+                        DrawRotatedTextAt(e.Graphics, 270, "Length " + lblFrameLength.Text + "m", 270, 230, TextFont, Brushes.Blue);
+
+                        e.Graphics.DrawString("Price per Meter: " + lblFrameWidth.Text, TextFont, blackBrush, 340, 115);
+                    }
                     break;
                 default:
                     break;
